@@ -66,8 +66,7 @@ Add this dependency to your project's build file:
 
 ```groovy
   repositories {
-    mavenCentral()     // Needed if the 'mailchimp-marketing-api-java' jar has been published to maven central.
-    mavenLocal()       // Needed if the 'mailchimp-marketing-api-java' jar has been published to the local maven repo.
+    maven { url "https://jitpack.io" }
   }
 
   dependencies {
