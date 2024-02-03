@@ -70,7 +70,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "io.github.erkoristhein.mailchimp.marketing:mailchimp-marketing-api-java:3.0.81"
+    implementation 'com.github.ErkoRisthein:mailchimp-marketing-api-java:3.0.81'
   }
 ```
 
