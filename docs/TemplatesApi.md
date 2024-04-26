@@ -87,7 +87,7 @@ null (empty response body)
 
 ## getTemplates
 
-> Templates getTemplates(fields, excludeFields, count, offset, createdBy, sinceDateCreated, beforeDateCreated, type, category, folderId, sortField, sortDir)
+> Templates getTemplates(fields, excludeFields, count, offset, createdBy, sinceDateCreated, beforeDateCreated, type, category, folderId, sortField, contentType, sortDir)
 
 List templates
 
@@ -126,9 +126,10 @@ public class Example {
         String category = "category_example"; // String | Limit results based on category.
         String folderId = "folderId_example"; // String | The unique folder id.
         String sortField = "date_created"; // String | Returns user templates sorted by the specified field.
+        String contentType = "html"; // String | Limit results based on how the template's content is put together. Only templates of type `user` can be filtered by `content_type`. If you want to retrieve saved templates created with the legacy email editor, then filter `content_type` to `template`. If you'd rather pull your saved templates for the new editor, filter to `multichannel`. For code your own templates, filter to `html`.
         String sortDir = "ASC"; // String | Determines the order direction for sorted results.
         try {
-            Templates result = apiInstance.getTemplates(fields, excludeFields, count, offset, createdBy, sinceDateCreated, beforeDateCreated, type, category, folderId, sortField, sortDir);
+            Templates result = apiInstance.getTemplates(fields, excludeFields, count, offset, createdBy, sinceDateCreated, beforeDateCreated, type, category, folderId, sortField, contentType, sortDir);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling TemplatesApi#getTemplates");
@@ -157,6 +158,7 @@ public class Example {
 | **category** | **String**| Limit results based on category. | [optional] |
 | **folderId** | **String**| The unique folder id. | [optional] |
 | **sortField** | **String**| Returns user templates sorted by the specified field. | [optional] [enum: date_created, date_edited, name] |
+| **contentType** | **String**| Limit results based on how the template&#39;s content is put together. Only templates of type &#x60;user&#x60; can be filtered by &#x60;content_type&#x60;. If you want to retrieve saved templates created with the legacy email editor, then filter &#x60;content_type&#x60; to &#x60;template&#x60;. If you&#39;d rather pull your saved templates for the new editor, filter to &#x60;multichannel&#x60;. For code your own templates, filter to &#x60;html&#x60;. | [optional] [enum: html, template, multichannel] |
 | **sortDir** | **String**| Determines the order direction for sorted results. | [optional] [enum: ASC, DESC] |
 
 ### Return type

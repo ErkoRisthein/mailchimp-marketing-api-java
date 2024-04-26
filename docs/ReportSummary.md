@@ -1,7 +1,8 @@
 
 
-# GetAllFacebookAds200ResponseFacebookAdsInnerAllOfReportSummary
+# ReportSummary
 
+High level reporting stats for an outreach.
 
 ## Properties
 
@@ -17,7 +18,7 @@
 |**uniqueVisits** | **Integer** |  |  [optional] |
 |**conversionRate** | **BigDecimal** |  |  [optional] |
 |**subscribes** | **Integer** |  |  [optional] |
-|**ecommerce** | [**GetAllFacebookAds200ResponseFacebookAdsInnerAllOfReportSummaryEcommerce**](GetAllFacebookAds200ResponseFacebookAdsInnerAllOfReportSummaryEcommerce.md) |  |  [optional] |
+|**ecommerce** | [**ReportSummaryEcommerce**](ReportSummaryEcommerce.md) |  |  [optional] |
 |**impressions** | **BigDecimal** |  |  [optional] |
 |**reach** | **Integer** |  |  [optional] |
 |**engagements** | **Integer** |  |  [optional] |

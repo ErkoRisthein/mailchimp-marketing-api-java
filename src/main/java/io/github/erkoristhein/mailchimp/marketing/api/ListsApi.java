@@ -1,6 +1,7 @@
 package io.github.erkoristhein.mailchimp.marketing.api;
 
 import io.github.erkoristhein.mailchimp.marketing.ApiClient;
+import io.github.erkoristhein.mailchimp.marketing.BaseApi;
 
 import io.github.erkoristhein.mailchimp.marketing.model.AbuseComplaint;
 import io.github.erkoristhein.mailchimp.marketing.model.AbuseComplaints;
@@ -76,24 +77,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-03T13:08:30.305646+02:00[Europe/Tallinn]")
-public class ListsApi {
-    private ApiClient apiClient;
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-26T16:39:59.516441+03:00[Europe/Helsinki]", comments = "Generator version: 7.5.0")
+public class ListsApi extends BaseApi {
 
     public ListsApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
     public ListsApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
-
-    public ApiClient getApiClient() {
-        return apiClient;
-    }
-
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
     /**
@@ -693,7 +685,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "count", count));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -775,7 +767,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "sort_dir", sortDir));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "has_ecommerce_store", hasEcommerceStore));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "include_total_contacts", includeTotalContacts));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -837,7 +829,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "include_total_contacts", includeTotalContacts));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -902,7 +894,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "count", count));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -975,7 +967,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "count", count));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1040,7 +1032,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1099,7 +1091,7 @@ public class ListsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1170,7 +1162,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "sort_field", sortField));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "sort_dir", sortDir));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1237,7 +1229,7 @@ public class ListsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1305,7 +1297,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "count", count));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "type", type));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1372,7 +1364,7 @@ public class ListsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1445,7 +1437,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "count", count));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1520,7 +1512,7 @@ public class ListsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1579,7 +1571,7 @@ public class ListsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1689,7 +1681,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "sort_dir", sortDir));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "since_last_campaign", sinceLastCampaign));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "unsubscribed_since", unsubscribedSince));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1756,7 +1748,7 @@ public class ListsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1826,7 +1818,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "action", action));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1846,7 +1838,7 @@ public class ListsApi {
      * <p><b>200</b> - 
      * <p><b>0</b> - An error generated by the Mailchimp API.
      * @param listId The unique ID for the list. (required)
-     * @param subscriberHash The MD5 hash of the lowercase version of the list member&#39;s email address. (required)
+     * @param subscriberHash The MD5 hash of the lowercase version of the list member&#39;s email address. This endpoint also accepts a list member&#39;s email address or contact_id. (required)
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
@@ -1865,7 +1857,7 @@ public class ListsApi {
      * <p><b>200</b> - 
      * <p><b>0</b> - An error generated by the Mailchimp API.
      * @param listId The unique ID for the list. (required)
-     * @param subscriberHash The MD5 hash of the lowercase version of the list member&#39;s email address. (required)
+     * @param subscriberHash The MD5 hash of the lowercase version of the list member&#39;s email address. This endpoint also accepts a list member&#39;s email address or contact_id. (required)
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
@@ -1902,7 +1894,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "count", count));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "activity_filters", activityFilters));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1975,7 +1967,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -2042,7 +2034,7 @@ public class ListsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -2121,7 +2113,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "count", count));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -2196,7 +2188,7 @@ public class ListsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -2267,7 +2259,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "type", type));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "required", required));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -2334,7 +2326,7 @@ public class ListsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -2410,7 +2402,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "include_cleaned", includeCleaned));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "include_transactional", includeTransactional));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "include_unsubscribed", includeUnsubscribed));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -2492,7 +2484,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "include_cleaned", includeCleaned));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "include_transactional", includeTransactional));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "include_unsubscribed", includeUnsubscribed));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -3036,7 +3028,7 @@ public class ListsApi {
         final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "skip_merge_validation", skipMergeValidation));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -3568,7 +3560,7 @@ public class ListsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "skip_merge_validation", skipMergeValidation));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "skip_duplicate_check", skipDuplicateCheck));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -3761,7 +3753,7 @@ public class ListsApi {
         final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "skip_merge_validation", skipMergeValidation));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -4354,7 +4346,7 @@ public class ListsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "include_unsubscribed", includeUnsubscribed));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "since_updated_at", sinceUpdatedAt));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "before_updated_at", beforeUpdatedAt));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -4425,7 +4417,7 @@ public class ListsApi {
         final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "skip_merge_validation", skipMergeValidation));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -4483,7 +4475,7 @@ public class ListsApi {
         final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "name", name));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -4496,5 +4488,28 @@ public class ListsApi {
 
         ParameterizedTypeReference<TagSearchResults> localReturnType = new ParameterizedTypeReference<TagSearchResults>() {};
         return apiClient.invokeAPI("/lists/{list_id}/tag-search", HttpMethod.GET, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    public <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "application/problem+json"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = {  };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

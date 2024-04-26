@@ -177,7 +177,7 @@ null (empty response body)
 
 ## getCampaigns
 
-> GetCampaigns200Response getCampaigns(fields, excludeFields, count, offset, type, status, beforeSendTime, sinceSendTime, beforeCreateTime, sinceCreateTime, listId, folderId, memberId, sortField, sortDir)
+> GetCampaigns200Response getCampaigns(fields, excludeFields, count, offset, type, status, beforeSendTime, sinceSendTime, beforeCreateTime, sinceCreateTime, listId, folderId, memberId, sortField, sortDir, includeResendShortcutEligibility)
 
 List campaigns
 
@@ -220,8 +220,9 @@ public class Example {
         String memberId = "memberId_example"; // String | Retrieve campaigns sent to a particular list member. Member ID is The MD5 hash of the lowercase version of the list member’s email address.
         String sortField = "create_time"; // String | Returns files sorted by the specified field.
         String sortDir = "ASC"; // String | Determines the order direction for sorted results.
+        Boolean includeResendShortcutEligibility = true; // Boolean | Return the `resend_shortcut_eligibility` field in the response, which tells you if the campaign is eligible for the various Campaign Resend Shortcuts offered.
         try {
-            GetCampaigns200Response result = apiInstance.getCampaigns(fields, excludeFields, count, offset, type, status, beforeSendTime, sinceSendTime, beforeCreateTime, sinceCreateTime, listId, folderId, memberId, sortField, sortDir);
+            GetCampaigns200Response result = apiInstance.getCampaigns(fields, excludeFields, count, offset, type, status, beforeSendTime, sinceSendTime, beforeCreateTime, sinceCreateTime, listId, folderId, memberId, sortField, sortDir, includeResendShortcutEligibility);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CampaignsApi#getCampaigns");
@@ -254,6 +255,7 @@ public class Example {
 | **memberId** | **String**| Retrieve campaigns sent to a particular list member. Member ID is The MD5 hash of the lowercase version of the list member’s email address. | [optional] |
 | **sortField** | **String**| Returns files sorted by the specified field. | [optional] [enum: create_time, send_time] |
 | **sortDir** | **String**| Determines the order direction for sorted results. | [optional] [enum: ASC, DESC] |
+| **includeResendShortcutEligibility** | **Boolean**| Return the &#x60;resend_shortcut_eligibility&#x60; field in the response, which tells you if the campaign is eligible for the various Campaign Resend Shortcuts offered. | [optional] |
 
 ### Return type
 
@@ -278,7 +280,7 @@ public class Example {
 
 ## getCampaignsId
 
-> Campaign getCampaignsId(campaignId, fields, excludeFields)
+> Campaign getCampaignsId(campaignId, fields, excludeFields, includeResendShortcutEligibility)
 
 Get campaign info
 
@@ -309,8 +311,9 @@ public class Example {
         String campaignId = "campaignId_example"; // String | The unique id for the campaign.
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
+        Boolean includeResendShortcutEligibility = true; // Boolean | Return the `resend_shortcut_eligibility` field in the response, which tells you if the campaign is eligible for the various Campaign Resend Shortcuts offered.
         try {
-            Campaign result = apiInstance.getCampaignsId(campaignId, fields, excludeFields);
+            Campaign result = apiInstance.getCampaignsId(campaignId, fields, excludeFields, includeResendShortcutEligibility);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CampaignsApi#getCampaignsId");
@@ -331,6 +334,7 @@ public class Example {
 | **campaignId** | **String**| The unique id for the campaign. | |
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
+| **includeResendShortcutEligibility** | **Boolean**| Return the &#x60;resend_shortcut_eligibility&#x60; field in the response, which tells you if the campaign is eligible for the various Campaign Resend Shortcuts offered. | [optional] |
 
 ### Return type
 
@@ -962,11 +966,11 @@ null (empty response body)
 
 ## postCampaignsIdActionsCreateResend
 
-> Campaign3 postCampaignsIdActionsCreateResend(campaignId)
+> Campaign3 postCampaignsIdActionsCreateResend(campaignId, body)
 
 Resend campaign
 
-Creates a Resend to Non-Openers version of this campaign. We will also check if this campaign meets the criteria for Resend to Non-Openers campaigns.
+Remove the guesswork for resending a campaign to certain segments. You can use this endpoint as a shortcut to replicate a campaign and resend it to common segments, such as those who didn&#39;t open the campaign, or any new subscribers since it was sent.
 
 ### Example
 
@@ -991,8 +995,9 @@ public class Example {
 
         CampaignsApi apiInstance = new CampaignsApi(defaultClient);
         String campaignId = "campaignId_example"; // String | The unique id for the campaign.
+        PostCampaignsIdActionsCreateResendRequest body = new PostCampaignsIdActionsCreateResendRequest(); // PostCampaignsIdActionsCreateResendRequest | 
         try {
-            Campaign3 result = apiInstance.postCampaignsIdActionsCreateResend(campaignId);
+            Campaign3 result = apiInstance.postCampaignsIdActionsCreateResend(campaignId, body);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CampaignsApi#postCampaignsIdActionsCreateResend");
@@ -1011,6 +1016,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **String**| The unique id for the campaign. | |
+| **body** | [**PostCampaignsIdActionsCreateResendRequest**](PostCampaignsIdActionsCreateResendRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -1022,7 +1028,7 @@ public class Example {
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json, application/problem+json
 
 

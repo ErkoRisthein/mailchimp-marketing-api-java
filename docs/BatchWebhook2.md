@@ -8,7 +8,8 @@ Update an existing Batch Webook.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**url** | **String** | A valid URL for the Webhook. |  |
+|**url** | **String** | A valid URL for the Webhook. |  [optional] |
+|**enabled** | **Boolean** | Whether the webhook receives requests or not. |  [optional] |
 
 
 

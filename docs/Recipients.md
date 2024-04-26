@@ -1,8 +1,8 @@
 
 
-# List10
+# Recipients
 
-List settings for the outreach
+High level audience information for who the outreach targets.
 
 ## Properties
 

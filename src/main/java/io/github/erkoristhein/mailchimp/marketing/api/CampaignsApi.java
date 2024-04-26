@@ -1,6 +1,7 @@
 package io.github.erkoristhein.mailchimp.marketing.api;
 
 import io.github.erkoristhein.mailchimp.marketing.ApiClient;
+import io.github.erkoristhein.mailchimp.marketing.BaseApi;
 
 import io.github.erkoristhein.mailchimp.marketing.model.Campaign;
 import io.github.erkoristhein.mailchimp.marketing.model.Campaign1;
@@ -14,6 +15,7 @@ import io.github.erkoristhein.mailchimp.marketing.model.CampaignFeedback3;
 import io.github.erkoristhein.mailchimp.marketing.model.CampaignReports;
 import io.github.erkoristhein.mailchimp.marketing.model.GetCampaigns200Response;
 import java.time.OffsetDateTime;
+import io.github.erkoristhein.mailchimp.marketing.model.PostCampaignsIdActionsCreateResendRequest;
 import io.github.erkoristhein.mailchimp.marketing.model.PostCampaignsIdActionsScheduleRequest;
 import io.github.erkoristhein.mailchimp.marketing.model.PostCampaignsIdActionsTestRequest;
 import io.github.erkoristhein.mailchimp.marketing.model.ProblemDetailDocument;
@@ -40,24 +42,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-03T13:08:30.305646+02:00[Europe/Tallinn]")
-public class CampaignsApi {
-    private ApiClient apiClient;
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-26T16:39:59.516441+03:00[Europe/Helsinki]", comments = "Generator version: 7.5.0")
+public class CampaignsApi extends BaseApi {
 
     public CampaignsApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
     public CampaignsApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
-
-    public ApiClient getApiClient() {
-        return apiClient;
-    }
-
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
     /**
@@ -188,11 +181,12 @@ public class CampaignsApi {
      * @param memberId Retrieve campaigns sent to a particular list member. Member ID is The MD5 hash of the lowercase version of the list member’s email address. (optional)
      * @param sortField Returns files sorted by the specified field. (optional)
      * @param sortDir Determines the order direction for sorted results. (optional)
+     * @param includeResendShortcutEligibility Return the &#x60;resend_shortcut_eligibility&#x60; field in the response, which tells you if the campaign is eligible for the various Campaign Resend Shortcuts offered. (optional)
      * @return GetCampaigns200Response
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public GetCampaigns200Response getCampaigns(List<String> fields, List<String> excludeFields, Integer count, Integer offset, String type, String status, OffsetDateTime beforeSendTime, OffsetDateTime sinceSendTime, OffsetDateTime beforeCreateTime, OffsetDateTime sinceCreateTime, String listId, String folderId, String memberId, String sortField, String sortDir) throws RestClientException {
-        return getCampaignsWithHttpInfo(fields, excludeFields, count, offset, type, status, beforeSendTime, sinceSendTime, beforeCreateTime, sinceCreateTime, listId, folderId, memberId, sortField, sortDir).getBody();
+    public GetCampaigns200Response getCampaigns(List<String> fields, List<String> excludeFields, Integer count, Integer offset, String type, String status, OffsetDateTime beforeSendTime, OffsetDateTime sinceSendTime, OffsetDateTime beforeCreateTime, OffsetDateTime sinceCreateTime, String listId, String folderId, String memberId, String sortField, String sortDir, Boolean includeResendShortcutEligibility) throws RestClientException {
+        return getCampaignsWithHttpInfo(fields, excludeFields, count, offset, type, status, beforeSendTime, sinceSendTime, beforeCreateTime, sinceCreateTime, listId, folderId, memberId, sortField, sortDir, includeResendShortcutEligibility).getBody();
     }
 
     /**
@@ -215,10 +209,11 @@ public class CampaignsApi {
      * @param memberId Retrieve campaigns sent to a particular list member. Member ID is The MD5 hash of the lowercase version of the list member’s email address. (optional)
      * @param sortField Returns files sorted by the specified field. (optional)
      * @param sortDir Determines the order direction for sorted results. (optional)
+     * @param includeResendShortcutEligibility Return the &#x60;resend_shortcut_eligibility&#x60; field in the response, which tells you if the campaign is eligible for the various Campaign Resend Shortcuts offered. (optional)
      * @return ResponseEntity&lt;GetCampaigns200Response&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<GetCampaigns200Response> getCampaignsWithHttpInfo(List<String> fields, List<String> excludeFields, Integer count, Integer offset, String type, String status, OffsetDateTime beforeSendTime, OffsetDateTime sinceSendTime, OffsetDateTime beforeCreateTime, OffsetDateTime sinceCreateTime, String listId, String folderId, String memberId, String sortField, String sortDir) throws RestClientException {
+    public ResponseEntity<GetCampaigns200Response> getCampaignsWithHttpInfo(List<String> fields, List<String> excludeFields, Integer count, Integer offset, String type, String status, OffsetDateTime beforeSendTime, OffsetDateTime sinceSendTime, OffsetDateTime beforeCreateTime, OffsetDateTime sinceCreateTime, String listId, String folderId, String memberId, String sortField, String sortDir, Boolean includeResendShortcutEligibility) throws RestClientException {
         Object localVarPostBody = null;
         
 
@@ -242,7 +237,8 @@ public class CampaignsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "member_id", memberId));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "sort_field", sortField));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "sort_dir", sortDir));
-
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "include_resend_shortcut_eligibility", includeResendShortcutEligibility));
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -264,11 +260,12 @@ public class CampaignsApi {
      * @param campaignId The unique id for the campaign. (required)
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
+     * @param includeResendShortcutEligibility Return the &#x60;resend_shortcut_eligibility&#x60; field in the response, which tells you if the campaign is eligible for the various Campaign Resend Shortcuts offered. (optional)
      * @return Campaign
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public Campaign getCampaignsId(String campaignId, List<String> fields, List<String> excludeFields) throws RestClientException {
-        return getCampaignsIdWithHttpInfo(campaignId, fields, excludeFields).getBody();
+    public Campaign getCampaignsId(String campaignId, List<String> fields, List<String> excludeFields, Boolean includeResendShortcutEligibility) throws RestClientException {
+        return getCampaignsIdWithHttpInfo(campaignId, fields, excludeFields, includeResendShortcutEligibility).getBody();
     }
 
     /**
@@ -279,10 +276,11 @@ public class CampaignsApi {
      * @param campaignId The unique id for the campaign. (required)
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
+     * @param includeResendShortcutEligibility Return the &#x60;resend_shortcut_eligibility&#x60; field in the response, which tells you if the campaign is eligible for the various Campaign Resend Shortcuts offered. (optional)
      * @return ResponseEntity&lt;Campaign&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Campaign> getCampaignsIdWithHttpInfo(String campaignId, List<String> fields, List<String> excludeFields) throws RestClientException {
+    public ResponseEntity<Campaign> getCampaignsIdWithHttpInfo(String campaignId, List<String> fields, List<String> excludeFields, Boolean includeResendShortcutEligibility) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'campaignId' is set
@@ -301,7 +299,8 @@ public class CampaignsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "include_resend_shortcut_eligibility", includeResendShortcutEligibility));
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -360,7 +359,7 @@ public class CampaignsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -419,7 +418,7 @@ public class CampaignsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -486,7 +485,7 @@ public class CampaignsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -545,7 +544,7 @@ public class CampaignsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -789,28 +788,30 @@ public class CampaignsApi {
     }
     /**
      * Resend campaign
-     * Creates a Resend to Non-Openers version of this campaign. We will also check if this campaign meets the criteria for Resend to Non-Openers campaigns.
+     * Remove the guesswork for resending a campaign to certain segments. You can use this endpoint as a shortcut to replicate a campaign and resend it to common segments, such as those who didn&#39;t open the campaign, or any new subscribers since it was sent.
      * <p><b>200</b> - 
      * <p><b>0</b> - An error generated by the Mailchimp API.
      * @param campaignId The unique id for the campaign. (required)
+     * @param body  (optional)
      * @return Campaign3
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public Campaign3 postCampaignsIdActionsCreateResend(String campaignId) throws RestClientException {
-        return postCampaignsIdActionsCreateResendWithHttpInfo(campaignId).getBody();
+    public Campaign3 postCampaignsIdActionsCreateResend(String campaignId, PostCampaignsIdActionsCreateResendRequest body) throws RestClientException {
+        return postCampaignsIdActionsCreateResendWithHttpInfo(campaignId, body).getBody();
     }
 
     /**
      * Resend campaign
-     * Creates a Resend to Non-Openers version of this campaign. We will also check if this campaign meets the criteria for Resend to Non-Openers campaigns.
+     * Remove the guesswork for resending a campaign to certain segments. You can use this endpoint as a shortcut to replicate a campaign and resend it to common segments, such as those who didn&#39;t open the campaign, or any new subscribers since it was sent.
      * <p><b>200</b> - 
      * <p><b>0</b> - An error generated by the Mailchimp API.
      * @param campaignId The unique id for the campaign. (required)
+     * @param body  (optional)
      * @return ResponseEntity&lt;Campaign3&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Campaign3> postCampaignsIdActionsCreateResendWithHttpInfo(String campaignId) throws RestClientException {
-        Object localVarPostBody = null;
+    public ResponseEntity<Campaign3> postCampaignsIdActionsCreateResendWithHttpInfo(String campaignId, PostCampaignsIdActionsCreateResendRequest body) throws RestClientException {
+        Object localVarPostBody = body;
         
         // verify the required parameter 'campaignId' is set
         if (campaignId == null) {
@@ -830,7 +831,9 @@ public class CampaignsApi {
             "application/json", "application/problem+json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] localVarContentTypes = {  };
+        final String[] localVarContentTypes = { 
+            "application/json"
+         };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
         String[] localVarAuthNames = new String[] { "basicAuth" };
@@ -1326,5 +1329,30 @@ public class CampaignsApi {
 
         ParameterizedTypeReference<CampaignContent> localReturnType = new ParameterizedTypeReference<CampaignContent>() {};
         return apiClient.invokeAPI("/campaigns/{campaign_id}/content", HttpMethod.PUT, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    public <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "application/problem+json"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "application/json"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

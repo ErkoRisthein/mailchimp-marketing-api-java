@@ -226,8 +226,6 @@ docs/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfChannel.md
 docs/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfContent.md
 docs/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfContentAttachmentsInner.md
 docs/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfFeedback.md
-docs/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfReportSummary.md
-docs/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfReportSummaryEcommerce.md
 docs/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfSite.md
 docs/GetAllLandingPages200Response.md
 docs/GetAuthorizedApps200Response.md
@@ -277,7 +275,6 @@ docs/LandingPageReportTimeseries.md
 docs/LandingPagesApi.md
 docs/LastMessage.md
 docs/List1.md
-docs/List10.md
 docs/List2.md
 docs/List3.md
 docs/List4.md
@@ -341,6 +338,7 @@ docs/Outreach1.md
 docs/PartialMatches.md
 docs/PingApi.md
 docs/PostBatchesRequest.md
+docs/PostCampaignsIdActionsCreateResendRequest.md
 docs/PostCampaignsIdActionsScheduleRequest.md
 docs/PostCampaignsIdActionsTestRequest.md
 docs/PostListsIdSegmentsIdMembersRequest.md
@@ -354,10 +352,14 @@ docs/RSSOptions.md
 docs/RSSOptions1.md
 docs/RSSOptions2.md
 docs/RSSOptions3.md
+docs/Recipients.md
 docs/Referrer.md
 docs/RemovedSubscribers.md
+docs/ReportSummary.md
+docs/ReportSummaryEcommerce.md
 docs/ReportingApi.md
 docs/ReportsApi.md
+docs/ResendShortcutEligibility.md
 docs/ResourceLink.md
 docs/Response.md
 docs/ResultsInner.md
@@ -420,6 +422,9 @@ docs/Templates.md
 docs/TemplatesApi.md
 docs/TimeseriesInner.md
 docs/TimewarpStatsInner.md
+docs/ToNewSubscribers.md
+docs/ToNonClickers.md
+docs/ToNonOpeners.md
 docs/TrackedConversations.md
 docs/TrackingSettings.md
 docs/TwitterStats.md
@@ -448,6 +453,7 @@ pom.xml
 settings.gradle
 src/main/AndroidManifest.xml
 src/main/java/io/github/erkoristhein/mailchimp/marketing/ApiClient.java
+src/main/java/io/github/erkoristhein/mailchimp/marketing/BaseApi.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/JavaTimeFormatter.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/RFC3339DateFormat.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/ServerConfiguration.java
@@ -688,8 +694,6 @@ src/main/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllFacebookAds
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfContent.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfContentAttachmentsInner.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfFeedback.java
-src/main/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfReportSummary.java
-src/main/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfReportSummaryEcommerce.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfSite.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllLandingPages200Response.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/GetAuthorizedApps200Response.java
@@ -738,7 +742,6 @@ src/main/java/io/github/erkoristhein/mailchimp/marketing/model/LandingPageReport
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/LandingPageReportTimeseries.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/LastMessage.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/List1.java
-src/main/java/io/github/erkoristhein/mailchimp/marketing/model/List10.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/List2.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/List3.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/List4.java
@@ -800,6 +803,7 @@ src/main/java/io/github/erkoristhein/mailchimp/marketing/model/Outreach.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/Outreach1.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/PartialMatches.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/PostBatchesRequest.java
+src/main/java/io/github/erkoristhein/mailchimp/marketing/model/PostCampaignsIdActionsCreateResendRequest.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/PostCampaignsIdActionsScheduleRequest.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/PostCampaignsIdActionsTestRequest.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/PostListsIdSegmentsIdMembersRequest.java
@@ -813,8 +817,12 @@ src/main/java/io/github/erkoristhein/mailchimp/marketing/model/RSSOptions.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/RSSOptions1.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/RSSOptions2.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/RSSOptions3.java
+src/main/java/io/github/erkoristhein/mailchimp/marketing/model/Recipients.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/Referrer.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/RemovedSubscribers.java
+src/main/java/io/github/erkoristhein/mailchimp/marketing/model/ReportSummary.java
+src/main/java/io/github/erkoristhein/mailchimp/marketing/model/ReportSummaryEcommerce.java
+src/main/java/io/github/erkoristhein/mailchimp/marketing/model/ResendShortcutEligibility.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/ResourceLink.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/Response.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/ResultsInner.java
@@ -871,6 +879,9 @@ src/main/java/io/github/erkoristhein/mailchimp/marketing/model/TemplateInstance1
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/Templates.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/TimeseriesInner.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/TimewarpStatsInner.java
+src/main/java/io/github/erkoristhein/mailchimp/marketing/model/ToNewSubscribers.java
+src/main/java/io/github/erkoristhein/mailchimp/marketing/model/ToNonClickers.java
+src/main/java/io/github/erkoristhein/mailchimp/marketing/model/ToNonOpeners.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/TrackedConversations.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/TrackingSettings.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/TwitterStats.java
@@ -1118,8 +1129,6 @@ src/test/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllFacebookAds
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfContentAttachmentsInnerTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfContentTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfFeedbackTest.java
-src/test/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfReportSummaryEcommerceTest.java
-src/test/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfReportSummaryTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllFacebookAds200ResponseFacebookAdsInnerAllOfSiteTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllFacebookAds200ResponseFacebookAdsInnerTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/GetAllFacebookAds200ResponseTest.java
@@ -1169,7 +1178,6 @@ src/test/java/io/github/erkoristhein/mailchimp/marketing/model/LandingPageReport
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/LandingPageReportTimeseriesTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/LandingPageTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/LastMessageTest.java
-src/test/java/io/github/erkoristhein/mailchimp/marketing/model/List10Test.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/List1Test.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/List2Test.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/List3Test.java
@@ -1232,6 +1240,7 @@ src/test/java/io/github/erkoristhein/mailchimp/marketing/model/Outreach1Test.jav
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/OutreachTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/PartialMatchesTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/PostBatchesRequestTest.java
+src/test/java/io/github/erkoristhein/mailchimp/marketing/model/PostCampaignsIdActionsCreateResendRequestTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/PostCampaignsIdActionsScheduleRequestTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/PostCampaignsIdActionsTestRequestTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/PostListsIdSegmentsIdMembersRequestTest.java
@@ -1245,8 +1254,12 @@ src/test/java/io/github/erkoristhein/mailchimp/marketing/model/RSSOptions1Test.j
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/RSSOptions2Test.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/RSSOptions3Test.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/RSSOptionsTest.java
+src/test/java/io/github/erkoristhein/mailchimp/marketing/model/RecipientsTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/ReferrerTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/RemovedSubscribersTest.java
+src/test/java/io/github/erkoristhein/mailchimp/marketing/model/ReportSummaryEcommerceTest.java
+src/test/java/io/github/erkoristhein/mailchimp/marketing/model/ReportSummaryTest.java
+src/test/java/io/github/erkoristhein/mailchimp/marketing/model/ResendShortcutEligibilityTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/ResourceLinkTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/ResponseTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/ResultsInnerTest.java
@@ -1303,6 +1316,9 @@ src/test/java/io/github/erkoristhein/mailchimp/marketing/model/TemplateInstanceT
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/TemplatesTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/TimeseriesInnerTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/TimewarpStatsInnerTest.java
+src/test/java/io/github/erkoristhein/mailchimp/marketing/model/ToNewSubscribersTest.java
+src/test/java/io/github/erkoristhein/mailchimp/marketing/model/ToNonClickersTest.java
+src/test/java/io/github/erkoristhein/mailchimp/marketing/model/ToNonOpenersTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/TrackedConversationsTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/TrackingSettingsTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/TwitterStatsTest.java

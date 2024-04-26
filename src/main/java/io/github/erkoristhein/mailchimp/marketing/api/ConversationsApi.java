@@ -1,6 +1,7 @@
 package io.github.erkoristhein.mailchimp.marketing.api;
 
 import io.github.erkoristhein.mailchimp.marketing.ApiClient;
+import io.github.erkoristhein.mailchimp.marketing.BaseApi;
 
 import io.github.erkoristhein.mailchimp.marketing.model.CollectionOfConversationMessages;
 import io.github.erkoristhein.mailchimp.marketing.model.Conversation;
@@ -30,24 +31,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-03T13:08:30.305646+02:00[Europe/Tallinn]")
-public class ConversationsApi {
-    private ApiClient apiClient;
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-26T16:39:59.516441+03:00[Europe/Helsinki]", comments = "Generator version: 7.5.0")
+public class ConversationsApi extends BaseApi {
 
     public ConversationsApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
     public ConversationsApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
-
-    public ApiClient getApiClient() {
-        return apiClient;
-    }
-
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
     /**
@@ -104,7 +96,7 @@ public class ConversationsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "has_unread_messages", hasUnreadMessages));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "list_id", listId));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "campaign_id", campaignId));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -167,7 +159,7 @@ public class ConversationsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -239,7 +231,7 @@ public class ConversationsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "is_read", isRead));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "before_timestamp", beforeTimestamp));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "since_timestamp", sinceTimestamp));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -310,7 +302,7 @@ public class ConversationsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -323,5 +315,28 @@ public class ConversationsApi {
 
         ParameterizedTypeReference<ConversationMessage> localReturnType = new ParameterizedTypeReference<ConversationMessage>() {};
         return apiClient.invokeAPI("/conversations/{conversation_id}/messages/{message_id}", HttpMethod.GET, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    public <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "application/problem+json"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = {  };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

@@ -2193,7 +2193,7 @@ public class Example {
 
         ListsApi apiInstance = new ListsApi(defaultClient);
         String listId = "listId_example"; // String | The unique ID for the list.
-        String subscriberHash = "subscriberHash_example"; // String | The MD5 hash of the lowercase version of the list member's email address.
+        String subscriberHash = "subscriberHash_example"; // String | The MD5 hash of the lowercase version of the list member's email address. This endpoint also accepts a list member's email address or contact_id.
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
@@ -2219,7 +2219,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **listId** | **String**| The unique ID for the list. | |
-| **subscriberHash** | **String**| The MD5 hash of the lowercase version of the list member&#39;s email address. | |
+| **subscriberHash** | **String**| The MD5 hash of the lowercase version of the list member&#39;s email address. This endpoint also accepts a list member&#39;s email address or contact_id. | |
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |

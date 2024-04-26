@@ -1,6 +1,7 @@
 package io.github.erkoristhein.mailchimp.marketing.api;
 
 import io.github.erkoristhein.mailchimp.marketing.ApiClient;
+import io.github.erkoristhein.mailchimp.marketing.BaseApi;
 
 import io.github.erkoristhein.mailchimp.marketing.model.ProblemDetailDocument;
 import io.github.erkoristhein.mailchimp.marketing.model.TemplateDefaultContent;
@@ -29,24 +30,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-03T13:08:30.305646+02:00[Europe/Tallinn]")
-public class TemplatesApi {
-    private ApiClient apiClient;
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-26T16:39:59.516441+03:00[Europe/Helsinki]", comments = "Generator version: 7.5.0")
+public class TemplatesApi extends BaseApi {
 
     public TemplatesApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
     public TemplatesApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
-
-    public ApiClient getApiClient() {
-        return apiClient;
-    }
-
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
     /**
@@ -115,12 +107,13 @@ public class TemplatesApi {
      * @param category Limit results based on category. (optional)
      * @param folderId The unique folder id. (optional)
      * @param sortField Returns user templates sorted by the specified field. (optional)
+     * @param contentType Limit results based on how the template&#39;s content is put together. Only templates of type &#x60;user&#x60; can be filtered by &#x60;content_type&#x60;. If you want to retrieve saved templates created with the legacy email editor, then filter &#x60;content_type&#x60; to &#x60;template&#x60;. If you&#39;d rather pull your saved templates for the new editor, filter to &#x60;multichannel&#x60;. For code your own templates, filter to &#x60;html&#x60;. (optional)
      * @param sortDir Determines the order direction for sorted results. (optional)
      * @return Templates
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public Templates getTemplates(List<String> fields, List<String> excludeFields, Integer count, Integer offset, String createdBy, String sinceDateCreated, String beforeDateCreated, String type, String category, String folderId, String sortField, String sortDir) throws RestClientException {
-        return getTemplatesWithHttpInfo(fields, excludeFields, count, offset, createdBy, sinceDateCreated, beforeDateCreated, type, category, folderId, sortField, sortDir).getBody();
+    public Templates getTemplates(List<String> fields, List<String> excludeFields, Integer count, Integer offset, String createdBy, String sinceDateCreated, String beforeDateCreated, String type, String category, String folderId, String sortField, String contentType, String sortDir) throws RestClientException {
+        return getTemplatesWithHttpInfo(fields, excludeFields, count, offset, createdBy, sinceDateCreated, beforeDateCreated, type, category, folderId, sortField, contentType, sortDir).getBody();
     }
 
     /**
@@ -139,11 +132,12 @@ public class TemplatesApi {
      * @param category Limit results based on category. (optional)
      * @param folderId The unique folder id. (optional)
      * @param sortField Returns user templates sorted by the specified field. (optional)
+     * @param contentType Limit results based on how the template&#39;s content is put together. Only templates of type &#x60;user&#x60; can be filtered by &#x60;content_type&#x60;. If you want to retrieve saved templates created with the legacy email editor, then filter &#x60;content_type&#x60; to &#x60;template&#x60;. If you&#39;d rather pull your saved templates for the new editor, filter to &#x60;multichannel&#x60;. For code your own templates, filter to &#x60;html&#x60;. (optional)
      * @param sortDir Determines the order direction for sorted results. (optional)
      * @return ResponseEntity&lt;Templates&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Templates> getTemplatesWithHttpInfo(List<String> fields, List<String> excludeFields, Integer count, Integer offset, String createdBy, String sinceDateCreated, String beforeDateCreated, String type, String category, String folderId, String sortField, String sortDir) throws RestClientException {
+    public ResponseEntity<Templates> getTemplatesWithHttpInfo(List<String> fields, List<String> excludeFields, Integer count, Integer offset, String createdBy, String sinceDateCreated, String beforeDateCreated, String type, String category, String folderId, String sortField, String contentType, String sortDir) throws RestClientException {
         Object localVarPostBody = null;
         
 
@@ -163,8 +157,9 @@ public class TemplatesApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "category", category));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "folder_id", folderId));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "sort_field", sortField));
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "content_type", contentType));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "sort_dir", sortDir));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -223,7 +218,7 @@ public class TemplatesApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -282,7 +277,7 @@ public class TemplatesApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -405,5 +400,30 @@ public class TemplatesApi {
 
         ParameterizedTypeReference<TemplateInstance> localReturnType = new ParameterizedTypeReference<TemplateInstance>() {};
         return apiClient.invokeAPI("/templates", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    public <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "application/problem+json"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "application/json"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

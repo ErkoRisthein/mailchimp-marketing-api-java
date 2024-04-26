@@ -1,6 +1,6 @@
 
 
-# GetAllFacebookAds200ResponseFacebookAdsInnerAllOfReportSummaryEcommerce
+# ReportSummaryEcommerce
 
 
 ## Properties

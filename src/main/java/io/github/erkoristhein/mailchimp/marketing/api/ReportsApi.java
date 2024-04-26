@@ -1,6 +1,7 @@
 package io.github.erkoristhein.mailchimp.marketing.api;
 
 import io.github.erkoristhein.mailchimp.marketing.ApiClient;
+import io.github.erkoristhein.mailchimp.marketing.BaseApi;
 
 import io.github.erkoristhein.mailchimp.marketing.model.AbuseComplaint1;
 import io.github.erkoristhein.mailchimp.marketing.model.AbuseComplaints1;
@@ -44,24 +45,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-03T13:08:30.305646+02:00[Europe/Tallinn]")
-public class ReportsApi {
-    private ApiClient apiClient;
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-26T16:39:59.516441+03:00[Europe/Helsinki]", comments = "Generator version: 7.5.0")
+public class ReportsApi extends BaseApi {
 
     public ReportsApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
     public ReportsApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
-
-    public ApiClient getApiClient() {
-        return apiClient;
-    }
-
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
     /**
@@ -114,7 +106,7 @@ public class ReportsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "type", type));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "before_send_time", beforeSendTime));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "since_send_time", sinceSendTime));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -173,7 +165,7 @@ public class ReportsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -232,7 +224,7 @@ public class ReportsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -299,7 +291,7 @@ public class ReportsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -358,7 +350,7 @@ public class ReportsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -382,11 +374,13 @@ public class ReportsApi {
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
      * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param sortField Returns click reports sorted by the specified field. (optional)
+     * @param sortDir Determines the order direction for sorted results. (optional)
      * @return ClickDetailReport
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ClickDetailReport getReportsIdClickDetails(String campaignId, List<String> fields, List<String> excludeFields, Integer count, Integer offset) throws RestClientException {
-        return getReportsIdClickDetailsWithHttpInfo(campaignId, fields, excludeFields, count, offset).getBody();
+    public ClickDetailReport getReportsIdClickDetails(String campaignId, List<String> fields, List<String> excludeFields, Integer count, Integer offset, String sortField, String sortDir) throws RestClientException {
+        return getReportsIdClickDetailsWithHttpInfo(campaignId, fields, excludeFields, count, offset, sortField, sortDir).getBody();
     }
 
     /**
@@ -399,10 +393,12 @@ public class ReportsApi {
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
      * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param sortField Returns click reports sorted by the specified field. (optional)
+     * @param sortDir Determines the order direction for sorted results. (optional)
      * @return ResponseEntity&lt;ClickDetailReport&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ClickDetailReport> getReportsIdClickDetailsWithHttpInfo(String campaignId, List<String> fields, List<String> excludeFields, Integer count, Integer offset) throws RestClientException {
+    public ResponseEntity<ClickDetailReport> getReportsIdClickDetailsWithHttpInfo(String campaignId, List<String> fields, List<String> excludeFields, Integer count, Integer offset, String sortField, String sortDir) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'campaignId' is set
@@ -423,7 +419,9 @@ public class ReportsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "count", count));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
-
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "sort_field", sortField));
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "sort_dir", sortDir));
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -490,7 +488,7 @@ public class ReportsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -563,7 +561,7 @@ public class ReportsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "count", count));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -638,7 +636,7 @@ public class ReportsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -697,7 +695,7 @@ public class ReportsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -765,7 +763,7 @@ public class ReportsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "count", count));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "sort_field", sortField));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -824,7 +822,7 @@ public class ReportsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -892,7 +890,7 @@ public class ReportsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "count", count));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "since", since));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -962,7 +960,7 @@ public class ReportsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "since", since));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1027,7 +1025,7 @@ public class ReportsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "count", count));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1052,11 +1050,13 @@ public class ReportsApi {
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
      * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param since Restrict results to campaign open events that occur after a specific time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
+     * @param sortField Returns open reports sorted by the specified field. (optional)
+     * @param sortDir Determines the order direction for sorted results. (optional)
      * @return OpenDetailReport
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public OpenDetailReport getReportsIdOpenDetails(String campaignId, List<String> fields, List<String> excludeFields, Integer count, Integer offset, String since) throws RestClientException {
-        return getReportsIdOpenDetailsWithHttpInfo(campaignId, fields, excludeFields, count, offset, since).getBody();
+    public OpenDetailReport getReportsIdOpenDetails(String campaignId, List<String> fields, List<String> excludeFields, Integer count, Integer offset, String since, String sortField, String sortDir) throws RestClientException {
+        return getReportsIdOpenDetailsWithHttpInfo(campaignId, fields, excludeFields, count, offset, since, sortField, sortDir).getBody();
     }
 
     /**
@@ -1070,10 +1070,12 @@ public class ReportsApi {
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
      * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param since Restrict results to campaign open events that occur after a specific time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
+     * @param sortField Returns open reports sorted by the specified field. (optional)
+     * @param sortDir Determines the order direction for sorted results. (optional)
      * @return ResponseEntity&lt;OpenDetailReport&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<OpenDetailReport> getReportsIdOpenDetailsWithHttpInfo(String campaignId, List<String> fields, List<String> excludeFields, Integer count, Integer offset, String since) throws RestClientException {
+    public ResponseEntity<OpenDetailReport> getReportsIdOpenDetailsWithHttpInfo(String campaignId, List<String> fields, List<String> excludeFields, Integer count, Integer offset, String since, String sortField, String sortDir) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'campaignId' is set
@@ -1095,7 +1097,9 @@ public class ReportsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "count", count));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "since", since));
-
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "sort_field", sortField));
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "sort_dir", sortDir));
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1162,7 +1166,7 @@ public class ReportsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1227,7 +1231,7 @@ public class ReportsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "count", count));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1294,7 +1298,7 @@ public class ReportsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1353,7 +1357,7 @@ public class ReportsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1418,7 +1422,7 @@ public class ReportsApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "count", count));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "offset", offset));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1485,7 +1489,7 @@ public class ReportsApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
-
+        
 
         final String[] localVarAccepts = { 
             "application/json", "application/problem+json"
@@ -1498,5 +1502,28 @@ public class ReportsApi {
 
         ParameterizedTypeReference<Unsubscribes> localReturnType = new ParameterizedTypeReference<Unsubscribes>() {};
         return apiClient.invokeAPI("/reports/{campaign_id}/unsubscribed/{subscriber_hash}", HttpMethod.GET, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    public <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "application/problem+json"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = {  };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

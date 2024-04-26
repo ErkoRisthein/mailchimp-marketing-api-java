@@ -426,7 +426,7 @@ public class Example {
 
 ## getReportsIdClickDetails
 
-> ClickDetailReport getReportsIdClickDetails(campaignId, fields, excludeFields, count, offset)
+> ClickDetailReport getReportsIdClickDetails(campaignId, fields, excludeFields, count, offset, sortField, sortDir)
 
 List campaign details
 
@@ -459,8 +459,10 @@ public class Example {
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
         Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.
+        String sortField = "total_clicks"; // String | Returns click reports sorted by the specified field.
+        String sortDir = "ASC"; // String | Determines the order direction for sorted results.
         try {
-            ClickDetailReport result = apiInstance.getReportsIdClickDetails(campaignId, fields, excludeFields, count, offset);
+            ClickDetailReport result = apiInstance.getReportsIdClickDetails(campaignId, fields, excludeFields, count, offset, sortField, sortDir);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportsApi#getReportsIdClickDetails");
@@ -483,6 +485,8 @@ public class Example {
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |
 | **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
+| **sortField** | **String**| Returns click reports sorted by the specified field. | [optional] [enum: total_clicks, unique_clicks] |
+| **sortDir** | **String**| Determines the order direction for sorted results. | [optional] [enum: ASC, DESC] |
 
 ### Return type
 
@@ -1232,7 +1236,7 @@ public class Example {
 
 ## getReportsIdOpenDetails
 
-> OpenDetailReport getReportsIdOpenDetails(campaignId, fields, excludeFields, count, offset, since)
+> OpenDetailReport getReportsIdOpenDetails(campaignId, fields, excludeFields, count, offset, since, sortField, sortDir)
 
 List campaign open details
 
@@ -1266,8 +1270,10 @@ public class Example {
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
         Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.
         String since = "2016-04-12 12:00:00"; // String | Restrict results to campaign open events that occur after a specific time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00.
+        String sortField = "opens_count"; // String | Returns open reports sorted by the specified field.
+        String sortDir = "ASC"; // String | Determines the order direction for sorted results.
         try {
-            OpenDetailReport result = apiInstance.getReportsIdOpenDetails(campaignId, fields, excludeFields, count, offset, since);
+            OpenDetailReport result = apiInstance.getReportsIdOpenDetails(campaignId, fields, excludeFields, count, offset, since, sortField, sortDir);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportsApi#getReportsIdOpenDetails");
@@ -1291,6 +1297,8 @@ public class Example {
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |
 | **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
 | **since** | **String**| Restrict results to campaign open events that occur after a specific time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. | [optional] |
+| **sortField** | **String**| Returns open reports sorted by the specified field. | [optional] [enum: opens_count] |
+| **sortDir** | **String**| Determines the order direction for sorted results. | [optional] [enum: ASC, DESC] |
 
 ### Return type
 

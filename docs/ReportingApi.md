@@ -10,12 +10,12 @@ All URIs are relative to *https://server.api.mailchimp.com/3.0*
 | [**getReportingLandingPages**](ReportingApi.md#getReportingLandingPages) | **GET** /reporting/landing-pages | List landing pages reports |
 | [**getReportingLandingPagesId**](ReportingApi.md#getReportingLandingPagesId) | **GET** /reporting/landing-pages/{outreach_id} | Get landing page report |
 | [**getReportingSurveys**](ReportingApi.md#getReportingSurveys) | **GET** /reporting/surveys | List survey reports |
-| [**getReportingSurveysId**](ReportingApi.md#getReportingSurveysId) | **GET** /reporting/surveys/{outreach_id} | Get survey report |
-| [**getReportingSurveysIdQuestions**](ReportingApi.md#getReportingSurveysIdQuestions) | **GET** /reporting/surveys/{outreach_id}/questions | List survey question reports |
-| [**getReportingSurveysIdQuestionsId**](ReportingApi.md#getReportingSurveysIdQuestionsId) | **GET** /reporting/surveys/{outreach_id}/questions/{question_id} | Get survey question report |
-| [**getReportingSurveysIdQuestionsIdAnswers**](ReportingApi.md#getReportingSurveysIdQuestionsIdAnswers) | **GET** /reporting/surveys/{outreach_id}/questions/{question_id}/answers | List answers for question |
-| [**getReportingSurveysIdResponses**](ReportingApi.md#getReportingSurveysIdResponses) | **GET** /reporting/surveys/{outreach_id}/responses | List survey responses |
-| [**getReportingSurveysIdResponsesId**](ReportingApi.md#getReportingSurveysIdResponsesId) | **GET** /reporting/surveys/{outreach_id}/responses/{response_id} | Get survey response |
+| [**getReportingSurveysId**](ReportingApi.md#getReportingSurveysId) | **GET** /reporting/surveys/{survey_id} | Get survey report |
+| [**getReportingSurveysIdQuestions**](ReportingApi.md#getReportingSurveysIdQuestions) | **GET** /reporting/surveys/{survey_id}/questions | List survey question reports |
+| [**getReportingSurveysIdQuestionsId**](ReportingApi.md#getReportingSurveysIdQuestionsId) | **GET** /reporting/surveys/{survey_id}/questions/{question_id} | Get survey question report |
+| [**getReportingSurveysIdQuestionsIdAnswers**](ReportingApi.md#getReportingSurveysIdQuestionsIdAnswers) | **GET** /reporting/surveys/{survey_id}/questions/{question_id}/answers | List answers for question |
+| [**getReportingSurveysIdResponses**](ReportingApi.md#getReportingSurveysIdResponses) | **GET** /reporting/surveys/{survey_id}/responses | List survey responses |
+| [**getReportingSurveysIdResponsesId**](ReportingApi.md#getReportingSurveysIdResponsesId) | **GET** /reporting/surveys/{survey_id}/responses/{response_id} | Get survey response |
 
 
 
@@ -499,7 +499,7 @@ public class Example {
 
 ## getReportingSurveysId
 
-> SurveyReport getReportingSurveysId(outreachId, fields, excludeFields)
+> SurveyReport getReportingSurveysId(surveyId, fields, excludeFields)
 
 Get survey report
 
@@ -527,11 +527,11 @@ public class Example {
         basicAuth.setPassword("YOUR PASSWORD");
 
         ReportingApi apiInstance = new ReportingApi(defaultClient);
-        String outreachId = "outreachId_example"; // String | The outreach id.
+        String surveyId = "surveyId_example"; // String | The ID of the survey.
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         try {
-            SurveyReport result = apiInstance.getReportingSurveysId(outreachId, fields, excludeFields);
+            SurveyReport result = apiInstance.getReportingSurveysId(surveyId, fields, excludeFields);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportingApi#getReportingSurveysId");
@@ -549,7 +549,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **outreachId** | **String**| The outreach id. | |
+| **surveyId** | **String**| The ID of the survey. | |
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 
@@ -576,7 +576,7 @@ public class Example {
 
 ## getReportingSurveysIdQuestions
 
-> GetReportingSurveysIdQuestions200Response getReportingSurveysIdQuestions(outreachId, fields, excludeFields)
+> GetReportingSurveysIdQuestions200Response getReportingSurveysIdQuestions(surveyId, fields, excludeFields)
 
 List survey question reports
 
@@ -604,11 +604,11 @@ public class Example {
         basicAuth.setPassword("YOUR PASSWORD");
 
         ReportingApi apiInstance = new ReportingApi(defaultClient);
-        String outreachId = "outreachId_example"; // String | The outreach id.
+        String surveyId = "surveyId_example"; // String | The ID of the survey.
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         try {
-            GetReportingSurveysIdQuestions200Response result = apiInstance.getReportingSurveysIdQuestions(outreachId, fields, excludeFields);
+            GetReportingSurveysIdQuestions200Response result = apiInstance.getReportingSurveysIdQuestions(surveyId, fields, excludeFields);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportingApi#getReportingSurveysIdQuestions");
@@ -626,7 +626,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **outreachId** | **String**| The outreach id. | |
+| **surveyId** | **String**| The ID of the survey. | |
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 
@@ -653,7 +653,7 @@ public class Example {
 
 ## getReportingSurveysIdQuestionsId
 
-> SurveyQuestionReport getReportingSurveysIdQuestionsId(outreachId, questionId, fields, excludeFields)
+> SurveyQuestionReport getReportingSurveysIdQuestionsId(surveyId, questionId, fields, excludeFields)
 
 Get survey question report
 
@@ -681,12 +681,12 @@ public class Example {
         basicAuth.setPassword("YOUR PASSWORD");
 
         ReportingApi apiInstance = new ReportingApi(defaultClient);
-        String outreachId = "outreachId_example"; // String | The outreach id.
+        String surveyId = "surveyId_example"; // String | The ID of the survey.
         String questionId = "questionId_example"; // String | The ID of the survey question.
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         try {
-            SurveyQuestionReport result = apiInstance.getReportingSurveysIdQuestionsId(outreachId, questionId, fields, excludeFields);
+            SurveyQuestionReport result = apiInstance.getReportingSurveysIdQuestionsId(surveyId, questionId, fields, excludeFields);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportingApi#getReportingSurveysIdQuestionsId");
@@ -704,7 +704,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **outreachId** | **String**| The outreach id. | |
+| **surveyId** | **String**| The ID of the survey. | |
 | **questionId** | **String**| The ID of the survey question. | |
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
@@ -732,7 +732,7 @@ public class Example {
 
 ## getReportingSurveysIdQuestionsIdAnswers
 
-> GetReportingSurveysIdQuestionsIdAnswers200Response getReportingSurveysIdQuestionsIdAnswers(outreachId, questionId, fields, excludeFields, respondentFamiliarityIs)
+> GetReportingSurveysIdQuestionsIdAnswers200Response getReportingSurveysIdQuestionsIdAnswers(surveyId, questionId, fields, excludeFields, respondentFamiliarityIs)
 
 List answers for question
 
@@ -760,13 +760,13 @@ public class Example {
         basicAuth.setPassword("YOUR PASSWORD");
 
         ReportingApi apiInstance = new ReportingApi(defaultClient);
-        String outreachId = "outreachId_example"; // String | The outreach id.
+        String surveyId = "surveyId_example"; // String | The ID of the survey.
         String questionId = "questionId_example"; // String | The ID of the survey question.
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         String respondentFamiliarityIs = "new"; // String | Filter survey responses by familiarity of the respondents.
         try {
-            GetReportingSurveysIdQuestionsIdAnswers200Response result = apiInstance.getReportingSurveysIdQuestionsIdAnswers(outreachId, questionId, fields, excludeFields, respondentFamiliarityIs);
+            GetReportingSurveysIdQuestionsIdAnswers200Response result = apiInstance.getReportingSurveysIdQuestionsIdAnswers(surveyId, questionId, fields, excludeFields, respondentFamiliarityIs);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportingApi#getReportingSurveysIdQuestionsIdAnswers");
@@ -784,7 +784,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **outreachId** | **String**| The outreach id. | |
+| **surveyId** | **String**| The ID of the survey. | |
 | **questionId** | **String**| The ID of the survey question. | |
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
@@ -813,7 +813,7 @@ public class Example {
 
 ## getReportingSurveysIdResponses
 
-> GetReportingSurveysIdResponses200Response getReportingSurveysIdResponses(outreachId, fields, excludeFields, answeredQuestion, choseAnswer, respondentFamiliarityIs)
+> GetReportingSurveysIdResponses200Response getReportingSurveysIdResponses(surveyId, fields, excludeFields, answeredQuestion, choseAnswer, respondentFamiliarityIs)
 
 List survey responses
 
@@ -841,14 +841,14 @@ public class Example {
         basicAuth.setPassword("YOUR PASSWORD");
 
         ReportingApi apiInstance = new ReportingApi(defaultClient);
-        String outreachId = "outreachId_example"; // String | The outreach id.
+        String surveyId = "surveyId_example"; // String | The ID of the survey.
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Integer answeredQuestion = 56; // Integer | The ID of the question that was answered.
         String choseAnswer = "choseAnswer_example"; // String | The ID of the option chosen to filter responses on.
         String respondentFamiliarityIs = "new"; // String | Filter survey responses by familiarity of the respondents.
         try {
-            GetReportingSurveysIdResponses200Response result = apiInstance.getReportingSurveysIdResponses(outreachId, fields, excludeFields, answeredQuestion, choseAnswer, respondentFamiliarityIs);
+            GetReportingSurveysIdResponses200Response result = apiInstance.getReportingSurveysIdResponses(surveyId, fields, excludeFields, answeredQuestion, choseAnswer, respondentFamiliarityIs);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportingApi#getReportingSurveysIdResponses");
@@ -866,7 +866,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **outreachId** | **String**| The outreach id. | |
+| **surveyId** | **String**| The ID of the survey. | |
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **answeredQuestion** | **Integer**| The ID of the question that was answered. | [optional] |
@@ -896,7 +896,7 @@ public class Example {
 
 ## getReportingSurveysIdResponsesId
 
-> SurveyResponse getReportingSurveysIdResponsesId(outreachId, responseId)
+> SurveyResponse getReportingSurveysIdResponsesId(surveyId, responseId)
 
 Get survey response
 
@@ -924,10 +924,10 @@ public class Example {
         basicAuth.setPassword("YOUR PASSWORD");
 
         ReportingApi apiInstance = new ReportingApi(defaultClient);
-        String outreachId = "outreachId_example"; // String | The outreach id.
+        String surveyId = "surveyId_example"; // String | The ID of the survey.
         String responseId = "responseId_example"; // String | The ID of the survey response.
         try {
-            SurveyResponse result = apiInstance.getReportingSurveysIdResponsesId(outreachId, responseId);
+            SurveyResponse result = apiInstance.getReportingSurveysIdResponsesId(surveyId, responseId);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportingApi#getReportingSurveysIdResponsesId");
@@ -945,7 +945,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **outreachId** | **String**| The outreach id. | |
+| **surveyId** | **String**| The ID of the survey. | |
 | **responseId** | **String**| The ID of the survey response. | |
 
 ### Return type
