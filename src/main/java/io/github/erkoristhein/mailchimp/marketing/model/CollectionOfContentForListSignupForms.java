@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CollectionOfContentForListSignupForms.JSON_PROPERTY_VALUE
 })
 @JsonTypeName("Collection_of_Content_for_List_Signup_Forms")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:12:19.705784+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class CollectionOfContentForListSignupForms {
   /**
    * The content section name.

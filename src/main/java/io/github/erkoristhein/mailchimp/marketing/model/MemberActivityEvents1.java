@@ -38,7 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   MemberActivityEvents1.JSON_PROPERTY_LINKS
 })
 @JsonTypeName("Member_Activity_Events_1")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:12:19.705784+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class MemberActivityEvents1 {
   public static final String JSON_PROPERTY_ACTIVITY = "activity";
   @jakarta.annotation.Nullable

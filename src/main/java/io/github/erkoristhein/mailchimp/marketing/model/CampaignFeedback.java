@@ -46,7 +46,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignFeedback.JSON_PROPERTY_LINKS
 })
 @JsonTypeName("Campaign_Feedback")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:12:19.705784+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class CampaignFeedback {
   public static final String JSON_PROPERTY_FEEDBACK_ID = "feedback_id";
   @jakarta.annotation.Nullable

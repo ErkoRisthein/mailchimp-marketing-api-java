@@ -34,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   UpdateInformationAboutASpecificWorkflowEmail.JSON_PROPERTY_DELAY
 })
 @JsonTypeName("Update_information_about_a_specific_workflow_email")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:12:19.705784+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class UpdateInformationAboutASpecificWorkflowEmail {
   public static final String JSON_PROPERTY_SETTINGS = "settings";
   @jakarta.annotation.Nullable

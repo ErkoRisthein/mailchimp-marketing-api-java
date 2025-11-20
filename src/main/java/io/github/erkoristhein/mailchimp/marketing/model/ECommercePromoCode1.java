@@ -38,7 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ECommercePromoCode1.JSON_PROPERTY_UPDATED_AT_FOREIGN
 })
 @JsonTypeName("E_commerce_Promo_Code_1")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:12:19.705784+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class ECommercePromoCode1 {
   public static final String JSON_PROPERTY_ID = "id";
   @jakarta.annotation.Nonnull

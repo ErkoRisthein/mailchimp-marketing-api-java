@@ -34,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GetAllFacebookAds200ResponseFacebookAdsInnerAllOfBudget.JSON_PROPERTY_CURRENCY_CODE
 })
 @JsonTypeName("getAllFacebookAds_200_response_facebook_ads_inner_allOf_budget")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:12:19.705784+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class GetAllFacebookAds200ResponseFacebookAdsInnerAllOfBudget {
   public static final String JSON_PROPERTY_DURATION = "duration";
   @jakarta.annotation.Nullable

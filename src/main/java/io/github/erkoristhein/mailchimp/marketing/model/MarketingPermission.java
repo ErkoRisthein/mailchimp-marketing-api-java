@@ -33,7 +33,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   MarketingPermission.JSON_PROPERTY_ENABLED
 })
 @JsonTypeName("Marketing_Permission")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:12:19.705784+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class MarketingPermission {
   public static final String JSON_PROPERTY_MARKETING_PERMISSION_ID = "marketing_permission_id";
   @jakarta.annotation.Nullable
