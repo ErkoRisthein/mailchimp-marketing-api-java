@@ -25,6 +25,7 @@ import io.github.erkoristhein.mailchimp.marketing.model.ClickDetailReport;
 import io.github.erkoristhein.mailchimp.marketing.model.DomainPerformance;
 import io.github.erkoristhein.mailchimp.marketing.model.EepurlActivity;
 import io.github.erkoristhein.mailchimp.marketing.model.EmailActivity;
+import io.github.erkoristhein.mailchimp.marketing.model.EmailActivity1;
 import io.github.erkoristhein.mailchimp.marketing.model.GetReportsIdEcommerceProductActivity200Response;
 import java.time.OffsetDateTime;
 import io.github.erkoristhein.mailchimp.marketing.model.OpenActivity;
@@ -32,6 +33,7 @@ import io.github.erkoristhein.mailchimp.marketing.model.OpenDetailReport;
 import io.github.erkoristhein.mailchimp.marketing.model.OpenLocations;
 import io.github.erkoristhein.mailchimp.marketing.model.ProblemDetailDocument;
 import io.github.erkoristhein.mailchimp.marketing.model.SentTo;
+import io.github.erkoristhein.mailchimp.marketing.model.SentTo1;
 import io.github.erkoristhein.mailchimp.marketing.model.Unsubscribes;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -337,7 +339,7 @@ class ReportsApiTest {
         List<String> excludeFields = null;
         String since = null;
 
-        EmailActivity response = api.getReportsIdEmailActivityId(campaignId, subscriberHash, fields, excludeFields, since);
+        EmailActivity1 response = api.getReportsIdEmailActivityId(campaignId, subscriberHash, fields, excludeFields, since);
 
         // TODO: test validations
     }
@@ -443,7 +445,7 @@ class ReportsApiTest {
         List<String> fields = null;
         List<String> excludeFields = null;
 
-        SentTo response = api.getReportsIdSentToId(campaignId, subscriberHash, fields, excludeFields);
+        SentTo1 response = api.getReportsIdSentToId(campaignId, subscriberHash, fields, excludeFields);
 
         // TODO: test validations
     }

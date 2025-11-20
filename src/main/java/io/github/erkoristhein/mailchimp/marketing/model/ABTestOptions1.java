@@ -41,7 +41,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ABTestOptions1.JSON_PROPERTY_REPLY_TO_ADDRESSES
 })
 @JsonTypeName("A_B_Test_Options_1")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T13:33:02.593663+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class ABTestOptions1 {
   /**
    * The combination that performs the best. This may be determined automatically by click rate, open rate, or total revenue -- or you may choose manually based on the reporting data you find the most valuable. For Multivariate Campaigns testing send_time, winner_criteria is ignored. For Multivariate Campaigns with &#39;manual&#39; as the winner_criteria, the winner must be chosen in the Mailchimp web application.

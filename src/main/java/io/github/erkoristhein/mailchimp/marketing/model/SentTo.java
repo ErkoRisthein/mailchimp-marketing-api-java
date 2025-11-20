@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.github.erkoristhein.mailchimp.marketing.model.ResourceLink;
+import io.github.erkoristhein.mailchimp.marketing.model.SentToRecipient;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -38,11 +39,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SentTo.JSON_PROPERTY_LINKS
 })
 @JsonTypeName("Sent_To")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T13:33:02.593663+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class SentTo {
   public static final String JSON_PROPERTY_SENT_TO = "sent_to";
   @jakarta.annotation.Nullable
-  private List<SentTo> sentTo = new ArrayList<>();
+  private List<SentToRecipient> sentTo = new ArrayList<>();
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaign_id";
   @jakarta.annotation.Nullable
@@ -73,13 +74,13 @@ public class SentTo {
     this.links = links;
   }
 
-  public SentTo sentTo(@jakarta.annotation.Nullable List<SentTo> sentTo) {
+  public SentTo sentTo(@jakarta.annotation.Nullable List<SentToRecipient> sentTo) {
     
     this.sentTo = sentTo;
     return this;
   }
 
-  public SentTo addSentToItem(SentTo sentToItem) {
+  public SentTo addSentToItem(SentToRecipient sentToItem) {
     if (this.sentTo == null) {
       this.sentTo = new ArrayList<>();
     }
@@ -95,14 +96,14 @@ public class SentTo {
   @JsonProperty(value = JSON_PROPERTY_SENT_TO, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<SentTo> getSentTo() {
+  public List<SentToRecipient> getSentTo() {
     return sentTo;
   }
 
 
   @JsonProperty(value = JSON_PROPERTY_SENT_TO, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSentTo(@jakarta.annotation.Nullable List<SentTo> sentTo) {
+  public void setSentTo(@jakarta.annotation.Nullable List<SentToRecipient> sentTo) {
     this.sentTo = sentTo;
   }
 

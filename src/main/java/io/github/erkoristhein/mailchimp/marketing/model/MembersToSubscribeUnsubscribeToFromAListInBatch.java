@@ -37,7 +37,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   MembersToSubscribeUnsubscribeToFromAListInBatch.JSON_PROPERTY_UPDATE_EXISTING
 })
 @JsonTypeName("Members_to_Subscribe_Unsubscribe_to_from_a_List_in_batch")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T13:33:02.593663+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class MembersToSubscribeUnsubscribeToFromAListInBatch {
   public static final String JSON_PROPERTY_MEMBERS = "members";
   @jakarta.annotation.Nonnull

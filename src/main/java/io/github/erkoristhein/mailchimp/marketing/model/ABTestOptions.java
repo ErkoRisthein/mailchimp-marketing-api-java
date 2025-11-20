@@ -46,7 +46,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ABTestOptions.JSON_PROPERTY_COMBINATIONS
 })
 @JsonTypeName("A_B_Test_Options")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T13:33:02.593663+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class ABTestOptions {
   public static final String JSON_PROPERTY_WINNING_COMBINATION_ID = "winning_combination_id";
   @jakarta.annotation.Nullable

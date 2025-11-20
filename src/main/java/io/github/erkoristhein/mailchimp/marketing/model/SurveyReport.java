@@ -42,7 +42,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SurveyReport.JSON_PROPERTY_TOTAL_RESPONSES
 })
 @JsonTypeName("Survey_Report")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T13:33:02.593663+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class SurveyReport {
   public static final String JSON_PROPERTY_ID = "id";
   @jakarta.annotation.Nullable

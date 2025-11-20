@@ -19,6 +19,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.github.erkoristhein.mailchimp.marketing.model.ResourceLink;
+import io.github.erkoristhein.mailchimp.marketing.model.SentToRecipient;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

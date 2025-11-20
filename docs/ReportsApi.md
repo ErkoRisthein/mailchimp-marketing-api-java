@@ -1074,7 +1074,7 @@ public class Example {
 
 ## getReportsIdEmailActivityId
 
-> EmailActivity getReportsIdEmailActivityId(campaignId, subscriberHash, fields, excludeFields, since)
+> EmailActivity1 getReportsIdEmailActivityId(campaignId, subscriberHash, fields, excludeFields, since)
 
 Get subscriber email activity
 
@@ -1108,7 +1108,7 @@ public class Example {
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         String since = "since_example"; // String | Restrict results to email activity events that occur after a specific time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00.
         try {
-            EmailActivity result = apiInstance.getReportsIdEmailActivityId(campaignId, subscriberHash, fields, excludeFields, since);
+            EmailActivity1 result = apiInstance.getReportsIdEmailActivityId(campaignId, subscriberHash, fields, excludeFields, since);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportsApi#getReportsIdEmailActivityId");
@@ -1134,7 +1134,7 @@ public class Example {
 
 ### Return type
 
-[**EmailActivity**](EmailActivity.md)
+[**EmailActivity1**](EmailActivity1.md)
 
 ### Authorization
 
@@ -1483,7 +1483,7 @@ public class Example {
 
 ## getReportsIdSentToId
 
-> SentTo getReportsIdSentToId(campaignId, subscriberHash, fields, excludeFields)
+> SentTo1 getReportsIdSentToId(campaignId, subscriberHash, fields, excludeFields)
 
 Get campaign recipient info
 
@@ -1516,7 +1516,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         try {
-            SentTo result = apiInstance.getReportsIdSentToId(campaignId, subscriberHash, fields, excludeFields);
+            SentTo1 result = apiInstance.getReportsIdSentToId(campaignId, subscriberHash, fields, excludeFields);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportsApi#getReportsIdSentToId");
@@ -1541,7 +1541,7 @@ public class Example {
 
 ### Return type
 
-[**SentTo**](SentTo.md)
+[**SentTo1**](SentTo1.md)
 
 ### Authorization
 

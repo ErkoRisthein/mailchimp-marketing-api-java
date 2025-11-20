@@ -36,7 +36,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CollectionOfElementStyleForListSignupForms.JSON_PROPERTY_OPTIONS
 })
 @JsonTypeName("Collection_of_Element_style_for_List_Signup_Forms")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T13:33:02.593663+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class CollectionOfElementStyleForListSignupForms {
   /**
    * A string that identifies the element selector.

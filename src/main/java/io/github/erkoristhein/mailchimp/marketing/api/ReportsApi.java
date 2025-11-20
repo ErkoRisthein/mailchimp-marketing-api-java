@@ -15,6 +15,7 @@ import io.github.erkoristhein.mailchimp.marketing.model.ClickDetailReport;
 import io.github.erkoristhein.mailchimp.marketing.model.DomainPerformance;
 import io.github.erkoristhein.mailchimp.marketing.model.EepurlActivity;
 import io.github.erkoristhein.mailchimp.marketing.model.EmailActivity;
+import io.github.erkoristhein.mailchimp.marketing.model.EmailActivity1;
 import io.github.erkoristhein.mailchimp.marketing.model.GetReportsIdEcommerceProductActivity200Response;
 import java.time.OffsetDateTime;
 import io.github.erkoristhein.mailchimp.marketing.model.OpenActivity;
@@ -22,6 +23,7 @@ import io.github.erkoristhein.mailchimp.marketing.model.OpenDetailReport;
 import io.github.erkoristhein.mailchimp.marketing.model.OpenLocations;
 import io.github.erkoristhein.mailchimp.marketing.model.ProblemDetailDocument;
 import io.github.erkoristhein.mailchimp.marketing.model.SentTo;
+import io.github.erkoristhein.mailchimp.marketing.model.SentTo1;
 import io.github.erkoristhein.mailchimp.marketing.model.Unsubscribes;
 
 import java.util.Collections;
@@ -45,7 +47,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T13:33:02.593663+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class ReportsApi extends BaseApi {
 
     public ReportsApi() {
@@ -914,10 +916,10 @@ public class ReportsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param since Restrict results to email activity events that occur after a specific time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
-     * @return EmailActivity
+     * @return EmailActivity1
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public EmailActivity getReportsIdEmailActivityId(String campaignId, String subscriberHash, List<String> fields, List<String> excludeFields, String since) throws RestClientException {
+    public EmailActivity1 getReportsIdEmailActivityId(String campaignId, String subscriberHash, List<String> fields, List<String> excludeFields, String since) throws RestClientException {
         return getReportsIdEmailActivityIdWithHttpInfo(campaignId, subscriberHash, fields, excludeFields, since).getBody();
     }
 
@@ -931,10 +933,10 @@ public class ReportsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param since Restrict results to email activity events that occur after a specific time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
-     * @return ResponseEntity&lt;EmailActivity&gt;
+     * @return ResponseEntity&lt;EmailActivity1&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<EmailActivity> getReportsIdEmailActivityIdWithHttpInfo(String campaignId, String subscriberHash, List<String> fields, List<String> excludeFields, String since) throws RestClientException {
+    public ResponseEntity<EmailActivity1> getReportsIdEmailActivityIdWithHttpInfo(String campaignId, String subscriberHash, List<String> fields, List<String> excludeFields, String since) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'campaignId' is set
@@ -971,7 +973,7 @@ public class ReportsApi extends BaseApi {
 
         String[] localVarAuthNames = new String[] { "basicAuth" };
 
-        ParameterizedTypeReference<EmailActivity> localReturnType = new ParameterizedTypeReference<EmailActivity>() {};
+        ParameterizedTypeReference<EmailActivity1> localReturnType = new ParameterizedTypeReference<EmailActivity1>() {};
         return apiClient.invokeAPI("/reports/{campaign_id}/email-activity/{subscriber_hash}", HttpMethod.GET, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
@@ -1254,10 +1256,10 @@ public class ReportsApi extends BaseApi {
      * @param subscriberHash The MD5 hash of the lowercase version of the list member&#39;s email address. (required)
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
-     * @return SentTo
+     * @return SentTo1
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public SentTo getReportsIdSentToId(String campaignId, String subscriberHash, List<String> fields, List<String> excludeFields) throws RestClientException {
+    public SentTo1 getReportsIdSentToId(String campaignId, String subscriberHash, List<String> fields, List<String> excludeFields) throws RestClientException {
         return getReportsIdSentToIdWithHttpInfo(campaignId, subscriberHash, fields, excludeFields).getBody();
     }
 
@@ -1270,10 +1272,10 @@ public class ReportsApi extends BaseApi {
      * @param subscriberHash The MD5 hash of the lowercase version of the list member&#39;s email address. (required)
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
-     * @return ResponseEntity&lt;SentTo&gt;
+     * @return ResponseEntity&lt;SentTo1&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<SentTo> getReportsIdSentToIdWithHttpInfo(String campaignId, String subscriberHash, List<String> fields, List<String> excludeFields) throws RestClientException {
+    public ResponseEntity<SentTo1> getReportsIdSentToIdWithHttpInfo(String campaignId, String subscriberHash, List<String> fields, List<String> excludeFields) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'campaignId' is set
@@ -1309,7 +1311,7 @@ public class ReportsApi extends BaseApi {
 
         String[] localVarAuthNames = new String[] { "basicAuth" };
 
-        ParameterizedTypeReference<SentTo> localReturnType = new ParameterizedTypeReference<SentTo>() {};
+        ParameterizedTypeReference<SentTo1> localReturnType = new ParameterizedTypeReference<SentTo1>() {};
         return apiClient.invokeAPI("/reports/{campaign_id}/sent-to/{subscriber_hash}", HttpMethod.GET, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**

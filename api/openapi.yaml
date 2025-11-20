@@ -12069,10 +12069,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Email_Activity"
+                $ref: "#/components/schemas/Email_Activity_1"
             application/problem+json:
               schema:
-                $ref: "#/components/schemas/Email_Activity"
+                $ref: "#/components/schemas/Email_Activity_1"
           description: ""
         default:
           content:
@@ -12316,10 +12316,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Sent_To"
+                $ref: "#/components/schemas/Sent_To_1"
             application/problem+json:
               schema:
-                $ref: "#/components/schemas/Sent_To"
+                $ref: "#/components/schemas/Sent_To_1"
           description: ""
         default:
           content:
@@ -23816,6 +23816,117 @@ components:
         recommendation_purchased:
           type: integer
       type: object
+    Sent_To_Recipient:
+      description: A subscriber's status for a specific campaign.
+      example:
+        email_id: email_id
+        list_id: list_id
+        _links:
+        - schema: schema
+          targetSchema: targetSchema
+          method: GET
+          rel: rel
+          href: href
+        - schema: schema
+          targetSchema: targetSchema
+          method: GET
+          rel: rel
+          href: href
+        merge_fields:
+          key: "{}"
+        open_count: 0
+        list_is_active: true
+        last_open: 2000-01-23T04:56:07.000+00:00
+        email_address: email_address
+        absplit_group: a
+        gmt_offset: 6
+        vip: true
+        campaign_id: campaign_id
+        status: sent
+      properties:
+        email_id:
+          description: The MD5 hash of the lowercase version of the list member's
+            email address.
+          readOnly: true
+          title: Email Hash
+          type: string
+        email_address:
+          description: Email address for a subscriber.
+          readOnly: true
+          title: Email Address
+          type: string
+        merge_fields:
+          additionalProperties:
+            description: This object's keys are merge tags (like FNAME). It's values
+              are the values to be added to the merge field.
+            type: object
+          description: "A dictionary of merge fields where the keys are the merge\
+            \ tags. See the [Merge Fields documentation](https://mailchimp.com/developer/marketing/docs/merge-fields/#structure)\
+            \ for more about the structure."
+          title: Merge Fields
+          type: object
+        vip:
+          description: "[VIP status](https://mailchimp.com/help/designate-and-send-to-vip-contacts/)\
+            \ for subscriber."
+          readOnly: true
+          title: VIP
+          type: boolean
+        status:
+          description: "The status of the email delivered to this subscriber. `hard`\
+            \ and `soft` refer to different [bounce types](https://mailchimp.com/help/soft-vs-hard-bounces/)."
+          enum:
+          - sent
+          - hard
+          - soft
+          title: Delivery Status
+          type: string
+        open_count:
+          description: The number of times a campaign was opened by this member.
+          title: Open Count
+          type: integer
+        last_open:
+          description: The date and time of the last open for this member in ISO 8601
+            format.
+          format: date-time
+          title: Last Open
+          type: string
+        absplit_group:
+          description: "For A/B Split Campaigns, the group the member was apart of."
+          enum:
+          - a
+          - b
+          - winner
+          title: A/B Split Group
+          type: string
+        gmt_offset:
+          description: "For campaigns sent with timewarp, the time zone group the\
+            \ member is apart of."
+          title: GMT Offset
+          type: integer
+        campaign_id:
+          description: The campaign id.
+          readOnly: true
+          title: Campaign ID
+          type: string
+        list_id:
+          description: The unique list id.
+          readOnly: true
+          title: List ID
+          type: string
+        list_is_active:
+          description: "The status of the list used, namely if it's deleted or disabled."
+          readOnly: true
+          title: List Status
+          type: boolean
+        _links:
+          description: A list of link types and descriptions for the API schema documents.
+          items:
+            $ref: "#/components/schemas/Resource_Link"
+          readOnly: true
+          title: Links
+          type: array
+      title: Sent To Recipient
+      type: object
     Template_Folder_1:
       description: A folder used to organize templates.
       properties:
@@ -26257,8 +26368,60 @@ components:
       description: A list of member's subscriber activity in a specific campaign.
       example:
         emails:
-        - null
-        - null
+        - email_id: email_id
+          email_address: email_address
+          list_id: list_id
+          activity:
+          - ip: ip
+            action: action
+            type: type
+            url: url
+            timestamp: 2000-01-23T04:56:07.000+00:00
+          - ip: ip
+            action: action
+            type: type
+            url: url
+            timestamp: 2000-01-23T04:56:07.000+00:00
+          _links:
+          - schema: schema
+            targetSchema: targetSchema
+            method: GET
+            rel: rel
+            href: href
+          - schema: schema
+            targetSchema: targetSchema
+            method: GET
+            rel: rel
+            href: href
+          list_is_active: true
+          campaign_id: campaign_id
+        - email_id: email_id
+          email_address: email_address
+          list_id: list_id
+          activity:
+          - ip: ip
+            action: action
+            type: type
+            url: url
+            timestamp: 2000-01-23T04:56:07.000+00:00
+          - ip: ip
+            action: action
+            type: type
+            url: url
+            timestamp: 2000-01-23T04:56:07.000+00:00
+          _links:
+          - schema: schema
+            targetSchema: targetSchema
+            method: GET
+            rel: rel
+            href: href
+          - schema: schema
+            targetSchema: targetSchema
+            method: GET
+            rel: rel
+            href: href
+          list_is_active: true
+          campaign_id: campaign_id
         _links:
         - schema: schema
           targetSchema: targetSchema
@@ -26276,7 +26439,7 @@ components:
         emails:
           description: An array of members that were sent the campaign.
           items:
-            $ref: "#/components/schemas/Email_Activity"
+            $ref: "#/components/schemas/Email_Activity_Record"
           title: Sent To
           type: array
         campaign_id:
@@ -36309,15 +36472,61 @@ components:
           rel: rel
           href: href
         sent_to:
-        - null
-        - null
-        total_items: 0
+        - email_id: email_id
+          list_id: list_id
+          _links:
+          - schema: schema
+            targetSchema: targetSchema
+            method: GET
+            rel: rel
+            href: href
+          - schema: schema
+            targetSchema: targetSchema
+            method: GET
+            rel: rel
+            href: href
+          merge_fields:
+            key: "{}"
+          open_count: 0
+          list_is_active: true
+          last_open: 2000-01-23T04:56:07.000+00:00
+          email_address: email_address
+          absplit_group: a
+          gmt_offset: 6
+          vip: true
+          campaign_id: campaign_id
+          status: sent
+        - email_id: email_id
+          list_id: list_id
+          _links:
+          - schema: schema
+            targetSchema: targetSchema
+            method: GET
+            rel: rel
+            href: href
+          - schema: schema
+            targetSchema: targetSchema
+            method: GET
+            rel: rel
+            href: href
+          merge_fields:
+            key: "{}"
+          open_count: 0
+          list_is_active: true
+          last_open: 2000-01-23T04:56:07.000+00:00
+          email_address: email_address
+          absplit_group: a
+          gmt_offset: 6
+          vip: true
+          campaign_id: campaign_id
+          status: sent
+        total_items: 1
         campaign_id: campaign_id
       properties:
         sent_to:
           description: "An array of objects, each representing a campaign recipient."
           items:
-            $ref: "#/components/schemas/Sent_To"
+            $ref: "#/components/schemas/Sent_To_Recipient"
           title: Sent To
           type: array
         campaign_id:
@@ -40891,6 +41100,12 @@ components:
       type: object
     Member_Activity_2:
       description: A summary of the interaction with the campaign.
+      example:
+        ip: ip
+        action: action
+        type: type
+        url: url
+        timestamp: 2000-01-23T04:56:07.000+00:00
       properties:
         action:
           description: "One of the following actions: 'open', 'click', or 'bounce'"
@@ -52236,6 +52451,81 @@ components:
           $ref: "#/components/schemas/Segment_Options_1"
       title: Recipients
       type: object
+    Email_Activity_1:
+      description: "A list of a member's subscriber activity in a specific campaign,\
+        \ including opens, clicks, and bounces."
+      example:
+        email_id: email_id
+        email_address: email_address
+        list_id: list_id
+        activity:
+        - ip: ip
+          action: action
+          type: type
+          url: url
+          timestamp: 2000-01-23T04:56:07.000+00:00
+        - ip: ip
+          action: action
+          type: type
+          url: url
+          timestamp: 2000-01-23T04:56:07.000+00:00
+        _links:
+        - schema: schema
+          targetSchema: targetSchema
+          method: GET
+          rel: rel
+          href: href
+        - schema: schema
+          targetSchema: targetSchema
+          method: GET
+          rel: rel
+          href: href
+        list_is_active: true
+        campaign_id: campaign_id
+      properties:
+        campaign_id:
+          description: The unique id for the campaign.
+          readOnly: true
+          title: Campaign ID
+          type: string
+        list_id:
+          description: The unique id for the list.
+          readOnly: true
+          title: List ID
+          type: string
+        list_is_active:
+          description: "The status of the list used, namely if it's deleted or disabled."
+          readOnly: true
+          title: List Status
+          type: boolean
+        email_id:
+          description: The MD5 hash of the lowercase version of the list member's
+            email address.
+          readOnly: true
+          title: Email Hash
+          type: string
+        email_address:
+          description: Email address for a subscriber.
+          readOnly: true
+          title: Email Address
+          type: string
+        activity:
+          description: "An array of objects, each showing an interaction with the\
+            \ email. Member activity limited to 1,000 open activities and 1,000 click\
+            \ activities per member per campaign."
+          items:
+            $ref: "#/components/schemas/Member_Activity_2"
+          title: Member Activity
+          type: array
+        _links:
+          description: A list of link types and descriptions for the API schema documents.
+          items:
+            $ref: "#/components/schemas/Resource_Link"
+          readOnly: true
+          title: Links
+          type: array
+      title: Email Activity
+      type: object
     getReportingFacebookAds_200_response_facebook_ads_inner_allOf_report_summary_average_order_amount:
       example:
         amount: 4.145608029883936
@@ -52817,6 +53107,81 @@ components:
           title: Is New Contact
           type: boolean
       title: Survey Question Answer
+      type: object
+    Email_Activity_Record:
+      description: "A list of a member's subscriber activity in a specific campaign,\
+        \ including opens, clicks, and bounces."
+      example:
+        email_id: email_id
+        email_address: email_address
+        list_id: list_id
+        activity:
+        - ip: ip
+          action: action
+          type: type
+          url: url
+          timestamp: 2000-01-23T04:56:07.000+00:00
+        - ip: ip
+          action: action
+          type: type
+          url: url
+          timestamp: 2000-01-23T04:56:07.000+00:00
+        _links:
+        - schema: schema
+          targetSchema: targetSchema
+          method: GET
+          rel: rel
+          href: href
+        - schema: schema
+          targetSchema: targetSchema
+          method: GET
+          rel: rel
+          href: href
+        list_is_active: true
+        campaign_id: campaign_id
+      properties:
+        campaign_id:
+          description: The unique id for the campaign.
+          readOnly: true
+          title: Campaign ID
+          type: string
+        list_id:
+          description: The unique id for the list.
+          readOnly: true
+          title: List ID
+          type: string
+        list_is_active:
+          description: "The status of the list used, namely if it's deleted or disabled."
+          readOnly: true
+          title: List Status
+          type: boolean
+        email_id:
+          description: The MD5 hash of the lowercase version of the list member's
+            email address.
+          readOnly: true
+          title: Email Hash
+          type: string
+        email_address:
+          description: Email address for a subscriber.
+          readOnly: true
+          title: Email Address
+          type: string
+        activity:
+          description: "An array of objects, each showing an interaction with the\
+            \ email. Member activity limited to 1,000 open activities and 1,000 click\
+            \ activities per member per campaign."
+          items:
+            $ref: "#/components/schemas/Member_Activity_2"
+          title: Member Activity
+          type: array
+        _links:
+          description: A list of link types and descriptions for the API schema documents.
+          items:
+            $ref: "#/components/schemas/Resource_Link"
+          readOnly: true
+          title: Links
+          type: array
+      title: Email Activity Record
       type: object
     Abandoned_Browse_Automation:
       description: abandonedBrowse automation details. abandonedBrowse is also known
@@ -55446,6 +55811,117 @@ components:
           type: string
         impressions:
           type: integer
+      type: object
+    Sent_To_1:
+      description: A subscriber's status for a specific campaign.
+      example:
+        email_id: email_id
+        list_id: list_id
+        _links:
+        - schema: schema
+          targetSchema: targetSchema
+          method: GET
+          rel: rel
+          href: href
+        - schema: schema
+          targetSchema: targetSchema
+          method: GET
+          rel: rel
+          href: href
+        merge_fields:
+          key: "{}"
+        open_count: 0
+        list_is_active: true
+        last_open: 2000-01-23T04:56:07.000+00:00
+        email_address: email_address
+        absplit_group: a
+        gmt_offset: 6
+        vip: true
+        campaign_id: campaign_id
+        status: sent
+      properties:
+        email_id:
+          description: The MD5 hash of the lowercase version of the list member's
+            email address.
+          readOnly: true
+          title: Email Hash
+          type: string
+        email_address:
+          description: Email address for a subscriber.
+          readOnly: true
+          title: Email Address
+          type: string
+        merge_fields:
+          additionalProperties:
+            description: This object's keys are merge tags (like FNAME). It's values
+              are the values to be added to the merge field.
+            type: object
+          description: "A dictionary of merge fields where the keys are the merge\
+            \ tags. See the [Merge Fields documentation](https://mailchimp.com/developer/marketing/docs/merge-fields/#structure)\
+            \ for more about the structure."
+          title: Merge Fields
+          type: object
+        vip:
+          description: "[VIP status](https://mailchimp.com/help/designate-and-send-to-vip-contacts/)\
+            \ for subscriber."
+          readOnly: true
+          title: VIP
+          type: boolean
+        status:
+          description: "The status of the email delivered to this subscriber. `hard`\
+            \ and `soft` refer to different [bounce types](https://mailchimp.com/help/soft-vs-hard-bounces/)."
+          enum:
+          - sent
+          - hard
+          - soft
+          title: Delivery Status
+          type: string
+        open_count:
+          description: The number of times a campaign was opened by this member.
+          title: Open Count
+          type: integer
+        last_open:
+          description: The date and time of the last open for this member in ISO 8601
+            format.
+          format: date-time
+          title: Last Open
+          type: string
+        absplit_group:
+          description: "For A/B Split Campaigns, the group the member was apart of."
+          enum:
+          - a
+          - b
+          - winner
+          title: A/B Split Group
+          type: string
+        gmt_offset:
+          description: "For campaigns sent with timewarp, the time zone group the\
+            \ member is apart of."
+          title: GMT Offset
+          type: integer
+        campaign_id:
+          description: The campaign id.
+          readOnly: true
+          title: Campaign ID
+          type: string
+        list_id:
+          description: The unique list id.
+          readOnly: true
+          title: List ID
+          type: string
+        list_is_active:
+          description: "The status of the list used, namely if it's deleted or disabled."
+          readOnly: true
+          title: List Status
+          type: boolean
+        _links:
+          description: A list of link types and descriptions for the API schema documents.
+          items:
+            $ref: "#/components/schemas/Resource_Link"
+          readOnly: true
+          title: Links
+          type: array
+      title: Sent To
       type: object
   securitySchemes:
     basicAuth:

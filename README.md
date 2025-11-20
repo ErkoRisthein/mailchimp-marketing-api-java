@@ -4,7 +4,7 @@ Mailchimp Marketing API
 
 - API version: 3.0.90
 
-- Build date: 2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]
+- Build date: 2025-11-20T13:33:02.593663+02:00[Europe/Tallinn]
 
 - Generator version: 7.17.0
 
@@ -67,7 +67,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>io.github.erkoristhein.mailchimp.marketing</groupId>
   <artifactId>mailchimp-marketing-api-java</artifactId>
-  <version>3.0.90</version>
+  <version>3.0.90-fix</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -83,7 +83,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "io.github.erkoristhein.mailchimp.marketing:mailchimp-marketing-api-java:3.0.90"
+     implementation "io.github.erkoristhein.mailchimp.marketing:mailchimp-marketing-api-java:3.0.90-fix"
   }
 ```
 
@@ -97,7 +97,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/mailchimp-marketing-api-java-3.0.90.jar`
+- `target/mailchimp-marketing-api-java-3.0.90-fix.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -619,6 +619,8 @@ Class | Method | HTTP request | Description
  - [EcommerceStats](docs/EcommerceStats.md)
  - [EepurlActivity](docs/EepurlActivity.md)
  - [EmailActivity](docs/EmailActivity.md)
+ - [EmailActivity1](docs/EmailActivity1.md)
+ - [EmailActivityRecord](docs/EmailActivityRecord.md)
  - [EmailChannelDetails](docs/EmailChannelDetails.md)
  - [EmailChannelDetails1](docs/EmailChannelDetails1.md)
  - [EmailChannelDetails2](docs/EmailChannelDetails2.md)
@@ -812,6 +814,8 @@ Class | Method | HTTP request | Description
  - [SendingSchedule](docs/SendingSchedule.md)
  - [SendingSchedule1](docs/SendingSchedule1.md)
  - [SentTo](docs/SentTo.md)
+ - [SentTo1](docs/SentTo1.md)
+ - [SentToRecipient](docs/SentToRecipient.md)
  - [ShareReport](docs/ShareReport.md)
  - [ShippingAddress](docs/ShippingAddress.md)
  - [ShippingAddress1](docs/ShippingAddress1.md)

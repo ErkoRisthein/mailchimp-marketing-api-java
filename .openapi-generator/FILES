@@ -202,6 +202,8 @@ docs/EcommerceProductVariants.md
 docs/EcommerceStats.md
 docs/EepurlActivity.md
 docs/EmailActivity.md
+docs/EmailActivity1.md
+docs/EmailActivityRecord.md
 docs/EmailChannelDetails.md
 docs/EmailChannelDetails1.md
 docs/EmailChannelDetails2.md
@@ -405,6 +407,8 @@ docs/SendChecklist.md
 docs/SendingSchedule.md
 docs/SendingSchedule1.md
 docs/SentTo.md
+docs/SentTo1.md
+docs/SentToRecipient.md
 docs/ShareReport.md
 docs/ShippingAddress.md
 docs/ShippingAddress1.md
@@ -706,6 +710,8 @@ src/main/java/io/github/erkoristhein/mailchimp/marketing/model/EcommerceProductV
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/EcommerceStats.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/EepurlActivity.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/EmailActivity.java
+src/main/java/io/github/erkoristhein/mailchimp/marketing/model/EmailActivity1.java
+src/main/java/io/github/erkoristhein/mailchimp/marketing/model/EmailActivityRecord.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/EmailChannelDetails.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/EmailChannelDetails1.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/EmailChannelDetails2.java
@@ -899,6 +905,8 @@ src/main/java/io/github/erkoristhein/mailchimp/marketing/model/SendChecklist.jav
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/SendingSchedule.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/SendingSchedule1.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/SentTo.java
+src/main/java/io/github/erkoristhein/mailchimp/marketing/model/SentTo1.java
+src/main/java/io/github/erkoristhein/mailchimp/marketing/model/SentToRecipient.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/ShareReport.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/ShippingAddress.java
 src/main/java/io/github/erkoristhein/mailchimp/marketing/model/ShippingAddress1.java
@@ -1174,6 +1182,8 @@ src/test/java/io/github/erkoristhein/mailchimp/marketing/model/EcommerceProductI
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/EcommerceProductVariantsTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/EcommerceStatsTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/EepurlActivityTest.java
+src/test/java/io/github/erkoristhein/mailchimp/marketing/model/EmailActivity1Test.java
+src/test/java/io/github/erkoristhein/mailchimp/marketing/model/EmailActivityRecordTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/EmailActivityTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/EmailChannelDetails1Test.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/EmailChannelDetails2Test.java
@@ -1367,6 +1377,8 @@ src/test/java/io/github/erkoristhein/mailchimp/marketing/model/SegmentOptionsTes
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/SendChecklistTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/SendingSchedule1Test.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/SendingScheduleTest.java
+src/test/java/io/github/erkoristhein/mailchimp/marketing/model/SentTo1Test.java
+src/test/java/io/github/erkoristhein/mailchimp/marketing/model/SentToRecipientTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/SentToTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/ShareReportTest.java
 src/test/java/io/github/erkoristhein/mailchimp/marketing/model/ShippingAddress1Test.java

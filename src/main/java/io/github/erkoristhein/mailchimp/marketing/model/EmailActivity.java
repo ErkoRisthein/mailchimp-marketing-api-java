@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
+import io.github.erkoristhein.mailchimp.marketing.model.EmailActivityRecord;
 import io.github.erkoristhein.mailchimp.marketing.model.ResourceLink;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,11 +39,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   EmailActivity.JSON_PROPERTY_LINKS
 })
 @JsonTypeName("Email_Activity")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T13:33:02.593663+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class EmailActivity {
   public static final String JSON_PROPERTY_EMAILS = "emails";
   @jakarta.annotation.Nullable
-  private List<EmailActivity> emails = new ArrayList<>();
+  private List<EmailActivityRecord> emails = new ArrayList<>();
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaign_id";
   @jakarta.annotation.Nullable
@@ -73,13 +74,13 @@ public class EmailActivity {
     this.links = links;
   }
 
-  public EmailActivity emails(@jakarta.annotation.Nullable List<EmailActivity> emails) {
+  public EmailActivity emails(@jakarta.annotation.Nullable List<EmailActivityRecord> emails) {
     
     this.emails = emails;
     return this;
   }
 
-  public EmailActivity addEmailsItem(EmailActivity emailsItem) {
+  public EmailActivity addEmailsItem(EmailActivityRecord emailsItem) {
     if (this.emails == null) {
       this.emails = new ArrayList<>();
     }
@@ -95,14 +96,14 @@ public class EmailActivity {
   @JsonProperty(value = JSON_PROPERTY_EMAILS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<EmailActivity> getEmails() {
+  public List<EmailActivityRecord> getEmails() {
     return emails;
   }
 
 
   @JsonProperty(value = JSON_PROPERTY_EMAILS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEmails(@jakarta.annotation.Nullable List<EmailActivity> emails) {
+  public void setEmails(@jakarta.annotation.Nullable List<EmailActivityRecord> emails) {
     this.emails = emails;
   }
 

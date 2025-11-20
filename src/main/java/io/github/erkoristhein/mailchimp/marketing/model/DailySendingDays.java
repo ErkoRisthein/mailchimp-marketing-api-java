@@ -37,7 +37,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DailySendingDays.JSON_PROPERTY_SATURDAY
 })
 @JsonTypeName("Daily_Sending_Days")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T13:33:02.593663+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class DailySendingDays {
   public static final String JSON_PROPERTY_SUNDAY = "sunday";
   @jakarta.annotation.Nullable

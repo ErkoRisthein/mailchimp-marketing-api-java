@@ -73,7 +73,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GetAllFacebookAds200ResponseFacebookAdsInner.JSON_PROPERTY_LINKS
 })
 @JsonTypeName("getAllFacebookAds_200_response_facebook_ads_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:52:34.947879+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T13:33:02.593663+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class GetAllFacebookAds200ResponseFacebookAdsInner {
   public static final String JSON_PROPERTY_ID = "id";
   @jakarta.annotation.Nullable
