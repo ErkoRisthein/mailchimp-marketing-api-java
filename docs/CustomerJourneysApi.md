@@ -14,7 +14,7 @@ All URIs are relative to *https://server.api.mailchimp.com/3.0*
 
 Customer Journeys API trigger for a contact
 
-A step trigger in a Customer Journey. To use it, create a starting point or step from the Customer Journey builder in the app using the Customer Journeys API condition. We’ll provide a url during the process that includes the {journey_id} and {step_id}. You’ll then be able to use this endpoint to trigger the condition for the posted contact.
+A step trigger in an Automation flow. To use it, create a starting point or step from the Automation flow builder in the app using the Customer Journey API condition. We’ll provide a url during the process that includes the {journey_id} and {step_id}. You’ll then be able to use this endpoint to trigger the condition for the posted contact.
 
 ### Example
 
@@ -38,9 +38,9 @@ public class Example {
         basicAuth.setPassword("YOUR PASSWORD");
 
         CustomerJourneysApi apiInstance = new CustomerJourneysApi(defaultClient);
-        Integer journeyId = 56; // Integer | The id for the Journey.
+        Integer journeyId = 56; // Integer | The id for the flow.
         Integer stepId = 56; // Integer | The id for the Step.
-        SubscriberInCustomerJourneySAudience body = new SubscriberInCustomerJourneySAudience(); // SubscriberInCustomerJourneySAudience | 
+        SubscriberInAutomationFlowSAudience body = new SubscriberInAutomationFlowSAudience(); // SubscriberInAutomationFlowSAudience | 
         try {
             Object result = apiInstance.postCustomerJourneysJourneysIdStepsIdActionsTrigger(journeyId, stepId, body);
             System.out.println(result);
@@ -60,9 +60,9 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **journeyId** | **Integer**| The id for the Journey. | |
+| **journeyId** | **Integer**| The id for the flow. | |
 | **stepId** | **Integer**| The id for the Step. | |
-| **body** | [**SubscriberInCustomerJourneySAudience**](SubscriberInCustomerJourneySAudience.md)|  | |
+| **body** | [**SubscriberInAutomationFlowSAudience**](SubscriberInAutomationFlowSAudience.md)|  | |
 
 ### Return type
 

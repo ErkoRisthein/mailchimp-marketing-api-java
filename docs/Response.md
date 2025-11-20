@@ -19,8 +19,8 @@ A single question and the response to that question.
 
 | Name | Value |
 |---- | -----|
-| PICKONE | &quot;pickOne&quot; |
-| PICKMANY | &quot;pickMany&quot; |
+| PICK_ONE | &quot;pickOne&quot; |
+| PICK_MANY | &quot;pickMany&quot; |
 | RANGE | &quot;range&quot; |
 | TEXT | &quot;text&quot; |
 | EMAIL | &quot;email&quot; |

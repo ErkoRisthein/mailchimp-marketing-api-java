@@ -10,6 +10,7 @@ Individuals who are currently or have been previously subscribed to this list, i
 |------------ | ------------- | ------------- | -------------|
 |**id** | **String** | The MD5 hash of the lowercase version of the list member&#39;s email address. |  [optional] [readonly] |
 |**emailAddress** | **String** | Email address for a subscriber. |  [optional] [readonly] |
+|**fullName** | **String** | The contact&#39;s full name. |  [optional] [readonly] |
 |**uniqueEmailId** | **String** | An identifier for the address across all of Mailchimp. |  [optional] [readonly] |
 |**emailType** | **String** | Type of email this member asked to get (&#39;html&#39; or &#39;text&#39;). |  [optional] |
 |**status** | [**StatusEnum**](#StatusEnum) | Subscriber&#39;s current status. |  [optional] |

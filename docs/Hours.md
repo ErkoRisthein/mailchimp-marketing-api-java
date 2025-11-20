@@ -16,9 +16,9 @@ The hours an Automation workflow can send.
 
 | Name | Value |
 |---- | -----|
-| ASAP | &quot;send_asap&quot; |
-| BETWEEN | &quot;send_between&quot; |
-| AT | &quot;send_at&quot; |
+| SEND_ASAP | &quot;send_asap&quot; |
+| SEND_BETWEEN | &quot;send_between&quot; |
+| SEND_AT | &quot;send_at&quot; |
 
 
 

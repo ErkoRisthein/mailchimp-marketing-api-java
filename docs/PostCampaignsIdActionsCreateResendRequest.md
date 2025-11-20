@@ -15,9 +15,10 @@
 
 | Name | Value |
 |---- | -----|
-| NON_OPENERS | &quot;to_non_openers&quot; |
-| NEW_SUBSCRIBERS | &quot;to_new_subscribers&quot; |
-| NON_CLICKERS | &quot;to_non_clickers&quot; |
+| TO_NON_OPENERS | &quot;to_non_openers&quot; |
+| TO_NEW_SUBSCRIBERS | &quot;to_new_subscribers&quot; |
+| TO_NON_CLICKERS | &quot;to_non_clickers&quot; |
+| TO_NON_PURCHASERS | &quot;to_non_purchasers&quot; |
 
 
 

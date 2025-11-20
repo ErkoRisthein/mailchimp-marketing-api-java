@@ -403,7 +403,7 @@ public class Example {
 
 Add landing page
 
-Create a new Mailchimp landing page.
+Create an unpublished and contentless Mailchimp landing page.
 
 ### Example
 

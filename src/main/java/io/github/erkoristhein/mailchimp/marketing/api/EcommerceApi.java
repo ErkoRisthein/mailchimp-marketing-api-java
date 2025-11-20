@@ -19,12 +19,14 @@ import io.github.erkoristhein.mailchimp.marketing.model.ECommerceCustomer4;
 import io.github.erkoristhein.mailchimp.marketing.model.ECommerceOrder;
 import io.github.erkoristhein.mailchimp.marketing.model.ECommerceOrder1;
 import io.github.erkoristhein.mailchimp.marketing.model.ECommerceOrder2;
+import io.github.erkoristhein.mailchimp.marketing.model.ECommerceOrder3;
 import io.github.erkoristhein.mailchimp.marketing.model.ECommerceOrderLineItem;
 import io.github.erkoristhein.mailchimp.marketing.model.ECommerceOrderLineItem1;
-import io.github.erkoristhein.mailchimp.marketing.model.ECommerceOrderLineItem2;
+import io.github.erkoristhein.mailchimp.marketing.model.ECommerceOrderLineItem3;
 import io.github.erkoristhein.mailchimp.marketing.model.ECommerceProduct;
 import io.github.erkoristhein.mailchimp.marketing.model.ECommerceProduct1;
 import io.github.erkoristhein.mailchimp.marketing.model.ECommerceProduct2;
+import io.github.erkoristhein.mailchimp.marketing.model.ECommerceProduct3;
 import io.github.erkoristhein.mailchimp.marketing.model.ECommerceProductImage;
 import io.github.erkoristhein.mailchimp.marketing.model.ECommerceProductImage1;
 import io.github.erkoristhein.mailchimp.marketing.model.ECommerceProductImage2;
@@ -72,7 +74,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-26T16:39:59.516441+03:00[Europe/Helsinki]", comments = "Generator version: 7.5.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:12:19.705784+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class EcommerceApi extends BaseApi {
 
     public EcommerceApi() {
@@ -762,7 +764,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param campaignId Restrict results to orders with a specific &#x60;campaign_id&#x60; value. (optional)
      * @param outreachId Restrict results to orders with a specific &#x60;outreach_id&#x60; value. (optional)
      * @param customerId Restrict results to orders made by a specific customer. (optional)
@@ -782,7 +784,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param campaignId Restrict results to orders with a specific &#x60;campaign_id&#x60; value. (optional)
      * @param outreachId Restrict results to orders with a specific &#x60;outreach_id&#x60; value. (optional)
      * @param customerId Restrict results to orders made by a specific customer. (optional)
@@ -829,7 +831,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return ECommerceStores
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -845,7 +847,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return ResponseEntity&lt;ECommerceStores&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -944,7 +946,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return Carts
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -961,7 +963,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return ResponseEntity&lt;Carts&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -1077,7 +1079,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return CartLines
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -1095,7 +1097,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return ResponseEntity&lt;CartLines&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -1224,7 +1226,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param emailAddress Restrict the response to customers with the email address. (optional)
      * @return Customers
      * @throws RestClientException if an error occurs while attempting to invoke the API
@@ -1242,7 +1244,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param emailAddress Restrict the response to customers with the email address. (optional)
      * @return ResponseEntity&lt;Customers&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
@@ -1359,7 +1361,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param customerId Restrict results to orders made by a specific customer. (optional)
      * @param hasOutreach Restrict results to orders that have an outreach attached. For example, an email campaign or Facebook ad. (optional)
      * @param campaignId Restrict results to orders with a specific &#x60;campaign_id&#x60; value. (optional)
@@ -1380,7 +1382,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param customerId Restrict results to orders made by a specific customer. (optional)
      * @param hasOutreach Restrict results to orders that have an outreach attached. For example, an email campaign or Facebook ad. (optional)
      * @param campaignId Restrict results to orders with a specific &#x60;campaign_id&#x60; value. (optional)
@@ -1504,7 +1506,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return OrderLines
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -1522,7 +1524,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return ResponseEntity&lt;OrderLines&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -1651,7 +1653,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return Products
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -1668,7 +1670,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return ResponseEntity&lt;Products&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -1716,10 +1718,10 @@ public class EcommerceApi extends BaseApi {
      * @param productId The id for the product of a store. (required)
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
-     * @return ECommerceProduct
+     * @return ECommerceProduct2
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ECommerceProduct getEcommerceStoresIdProductsId(String storeId, String productId, List<String> fields, List<String> excludeFields) throws RestClientException {
+    public ECommerceProduct2 getEcommerceStoresIdProductsId(String storeId, String productId, List<String> fields, List<String> excludeFields) throws RestClientException {
         return getEcommerceStoresIdProductsIdWithHttpInfo(storeId, productId, fields, excludeFields).getBody();
     }
 
@@ -1732,10 +1734,10 @@ public class EcommerceApi extends BaseApi {
      * @param productId The id for the product of a store. (required)
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
-     * @return ResponseEntity&lt;ECommerceProduct&gt;
+     * @return ResponseEntity&lt;ECommerceProduct2&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ECommerceProduct> getEcommerceStoresIdProductsIdWithHttpInfo(String storeId, String productId, List<String> fields, List<String> excludeFields) throws RestClientException {
+    public ResponseEntity<ECommerceProduct2> getEcommerceStoresIdProductsIdWithHttpInfo(String storeId, String productId, List<String> fields, List<String> excludeFields) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'storeId' is set
@@ -1771,7 +1773,7 @@ public class EcommerceApi extends BaseApi {
 
         String[] localVarAuthNames = new String[] { "basicAuth" };
 
-        ParameterizedTypeReference<ECommerceProduct> localReturnType = new ParameterizedTypeReference<ECommerceProduct>() {};
+        ParameterizedTypeReference<ECommerceProduct2> localReturnType = new ParameterizedTypeReference<ECommerceProduct2>() {};
         return apiClient.invokeAPI("/ecommerce/stores/{store_id}/products/{product_id}", HttpMethod.GET, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
@@ -1784,7 +1786,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return EcommerceProductImages
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -1802,7 +1804,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return ResponseEntity&lt;EcommerceProductImages&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -1857,10 +1859,10 @@ public class EcommerceApi extends BaseApi {
      * @param imageId The id for the product image. (required)
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
-     * @return ECommerceProductImage
+     * @return ECommerceProductImage1
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ECommerceProductImage getEcommerceStoresIdProductsIdImagesId(String storeId, String productId, String imageId, List<String> fields, List<String> excludeFields) throws RestClientException {
+    public ECommerceProductImage1 getEcommerceStoresIdProductsIdImagesId(String storeId, String productId, String imageId, List<String> fields, List<String> excludeFields) throws RestClientException {
         return getEcommerceStoresIdProductsIdImagesIdWithHttpInfo(storeId, productId, imageId, fields, excludeFields).getBody();
     }
 
@@ -1874,10 +1876,10 @@ public class EcommerceApi extends BaseApi {
      * @param imageId The id for the product image. (required)
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
-     * @return ResponseEntity&lt;ECommerceProductImage&gt;
+     * @return ResponseEntity&lt;ECommerceProductImage1&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ECommerceProductImage> getEcommerceStoresIdProductsIdImagesIdWithHttpInfo(String storeId, String productId, String imageId, List<String> fields, List<String> excludeFields) throws RestClientException {
+    public ResponseEntity<ECommerceProductImage1> getEcommerceStoresIdProductsIdImagesIdWithHttpInfo(String storeId, String productId, String imageId, List<String> fields, List<String> excludeFields) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'storeId' is set
@@ -1919,7 +1921,7 @@ public class EcommerceApi extends BaseApi {
 
         String[] localVarAuthNames = new String[] { "basicAuth" };
 
-        ParameterizedTypeReference<ECommerceProductImage> localReturnType = new ParameterizedTypeReference<ECommerceProductImage>() {};
+        ParameterizedTypeReference<ECommerceProductImage1> localReturnType = new ParameterizedTypeReference<ECommerceProductImage1>() {};
         return apiClient.invokeAPI("/ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}", HttpMethod.GET, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
@@ -1932,7 +1934,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return EcommerceProductVariants
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -1950,7 +1952,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return ResponseEntity&lt;EcommerceProductVariants&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -2005,10 +2007,10 @@ public class EcommerceApi extends BaseApi {
      * @param variantId The id for the product variant. (required)
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
-     * @return ECommerceProductVariant
+     * @return ECommerceProductVariant1
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ECommerceProductVariant getEcommerceStoresIdProductsIdVariantsId(String storeId, String productId, String variantId, List<String> fields, List<String> excludeFields) throws RestClientException {
+    public ECommerceProductVariant1 getEcommerceStoresIdProductsIdVariantsId(String storeId, String productId, String variantId, List<String> fields, List<String> excludeFields) throws RestClientException {
         return getEcommerceStoresIdProductsIdVariantsIdWithHttpInfo(storeId, productId, variantId, fields, excludeFields).getBody();
     }
 
@@ -2022,10 +2024,10 @@ public class EcommerceApi extends BaseApi {
      * @param variantId The id for the product variant. (required)
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
-     * @return ResponseEntity&lt;ECommerceProductVariant&gt;
+     * @return ResponseEntity&lt;ECommerceProductVariant1&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ECommerceProductVariant> getEcommerceStoresIdProductsIdVariantsIdWithHttpInfo(String storeId, String productId, String variantId, List<String> fields, List<String> excludeFields) throws RestClientException {
+    public ResponseEntity<ECommerceProductVariant1> getEcommerceStoresIdProductsIdVariantsIdWithHttpInfo(String storeId, String productId, String variantId, List<String> fields, List<String> excludeFields) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'storeId' is set
@@ -2067,7 +2069,7 @@ public class EcommerceApi extends BaseApi {
 
         String[] localVarAuthNames = new String[] { "basicAuth" };
 
-        ParameterizedTypeReference<ECommerceProductVariant> localReturnType = new ParameterizedTypeReference<ECommerceProductVariant>() {};
+        ParameterizedTypeReference<ECommerceProductVariant1> localReturnType = new ParameterizedTypeReference<ECommerceProductVariant1>() {};
         return apiClient.invokeAPI("/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}", HttpMethod.GET, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
@@ -2080,7 +2082,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return PromoCodes
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -2098,7 +2100,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return ResponseEntity&lt;PromoCodes&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -2227,7 +2229,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return PromoRules
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -2244,7 +2246,7 @@ public class EcommerceApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return ResponseEntity&lt;PromoRules&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -2633,7 +2635,7 @@ public class EcommerceApi extends BaseApi {
      * @return ECommerceOrder
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ECommerceOrder patchEcommerceStoresIdOrdersId(String storeId, String orderId, ECommerceOrder2 body) throws RestClientException {
+    public ECommerceOrder patchEcommerceStoresIdOrdersId(String storeId, String orderId, ECommerceOrder3 body) throws RestClientException {
         return patchEcommerceStoresIdOrdersIdWithHttpInfo(storeId, orderId, body).getBody();
     }
 
@@ -2648,7 +2650,7 @@ public class EcommerceApi extends BaseApi {
      * @return ResponseEntity&lt;ECommerceOrder&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ECommerceOrder> patchEcommerceStoresIdOrdersIdWithHttpInfo(String storeId, String orderId, ECommerceOrder2 body) throws RestClientException {
+    public ResponseEntity<ECommerceOrder> patchEcommerceStoresIdOrdersIdWithHttpInfo(String storeId, String orderId, ECommerceOrder3 body) throws RestClientException {
         Object localVarPostBody = body;
         
         // verify the required parameter 'storeId' is set
@@ -2702,7 +2704,7 @@ public class EcommerceApi extends BaseApi {
      * @return ECommerceOrderLineItem
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ECommerceOrderLineItem patchEcommerceStoresIdOrdersIdLinesId(String storeId, String orderId, String lineId, ECommerceOrderLineItem2 body) throws RestClientException {
+    public ECommerceOrderLineItem patchEcommerceStoresIdOrdersIdLinesId(String storeId, String orderId, String lineId, ECommerceOrderLineItem3 body) throws RestClientException {
         return patchEcommerceStoresIdOrdersIdLinesIdWithHttpInfo(storeId, orderId, lineId, body).getBody();
     }
 
@@ -2718,7 +2720,7 @@ public class EcommerceApi extends BaseApi {
      * @return ResponseEntity&lt;ECommerceOrderLineItem&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ECommerceOrderLineItem> patchEcommerceStoresIdOrdersIdLinesIdWithHttpInfo(String storeId, String orderId, String lineId, ECommerceOrderLineItem2 body) throws RestClientException {
+    public ResponseEntity<ECommerceOrderLineItem> patchEcommerceStoresIdOrdersIdLinesIdWithHttpInfo(String storeId, String orderId, String lineId, ECommerceOrderLineItem3 body) throws RestClientException {
         Object localVarPostBody = body;
         
         // verify the required parameter 'storeId' is set
@@ -2774,10 +2776,10 @@ public class EcommerceApi extends BaseApi {
      * @param storeId The store id. (required)
      * @param productId The id for the product of a store. (required)
      * @param body  (required)
-     * @return ECommerceProduct
+     * @return ECommerceProduct2
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ECommerceProduct patchEcommerceStoresIdProductsId(String storeId, String productId, ECommerceProduct2 body) throws RestClientException {
+    public ECommerceProduct2 patchEcommerceStoresIdProductsId(String storeId, String productId, ECommerceProduct3 body) throws RestClientException {
         return patchEcommerceStoresIdProductsIdWithHttpInfo(storeId, productId, body).getBody();
     }
 
@@ -2789,10 +2791,10 @@ public class EcommerceApi extends BaseApi {
      * @param storeId The store id. (required)
      * @param productId The id for the product of a store. (required)
      * @param body  (required)
-     * @return ResponseEntity&lt;ECommerceProduct&gt;
+     * @return ResponseEntity&lt;ECommerceProduct2&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ECommerceProduct> patchEcommerceStoresIdProductsIdWithHttpInfo(String storeId, String productId, ECommerceProduct2 body) throws RestClientException {
+    public ResponseEntity<ECommerceProduct2> patchEcommerceStoresIdProductsIdWithHttpInfo(String storeId, String productId, ECommerceProduct3 body) throws RestClientException {
         Object localVarPostBody = body;
         
         // verify the required parameter 'storeId' is set
@@ -2831,7 +2833,7 @@ public class EcommerceApi extends BaseApi {
 
         String[] localVarAuthNames = new String[] { "basicAuth" };
 
-        ParameterizedTypeReference<ECommerceProduct> localReturnType = new ParameterizedTypeReference<ECommerceProduct>() {};
+        ParameterizedTypeReference<ECommerceProduct2> localReturnType = new ParameterizedTypeReference<ECommerceProduct2>() {};
         return apiClient.invokeAPI("/ecommerce/stores/{store_id}/products/{product_id}", HttpMethod.PATCH, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
@@ -2843,10 +2845,10 @@ public class EcommerceApi extends BaseApi {
      * @param productId The id for the product of a store. (required)
      * @param imageId The id for the product image. (required)
      * @param body  (required)
-     * @return ECommerceProductImage
+     * @return ECommerceProductImage1
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ECommerceProductImage patchEcommerceStoresIdProductsIdImagesId(String storeId, String productId, String imageId, ECommerceProductImage2 body) throws RestClientException {
+    public ECommerceProductImage1 patchEcommerceStoresIdProductsIdImagesId(String storeId, String productId, String imageId, ECommerceProductImage2 body) throws RestClientException {
         return patchEcommerceStoresIdProductsIdImagesIdWithHttpInfo(storeId, productId, imageId, body).getBody();
     }
 
@@ -2859,10 +2861,10 @@ public class EcommerceApi extends BaseApi {
      * @param productId The id for the product of a store. (required)
      * @param imageId The id for the product image. (required)
      * @param body  (required)
-     * @return ResponseEntity&lt;ECommerceProductImage&gt;
+     * @return ResponseEntity&lt;ECommerceProductImage1&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ECommerceProductImage> patchEcommerceStoresIdProductsIdImagesIdWithHttpInfo(String storeId, String productId, String imageId, ECommerceProductImage2 body) throws RestClientException {
+    public ResponseEntity<ECommerceProductImage1> patchEcommerceStoresIdProductsIdImagesIdWithHttpInfo(String storeId, String productId, String imageId, ECommerceProductImage2 body) throws RestClientException {
         Object localVarPostBody = body;
         
         // verify the required parameter 'storeId' is set
@@ -2907,7 +2909,7 @@ public class EcommerceApi extends BaseApi {
 
         String[] localVarAuthNames = new String[] { "basicAuth" };
 
-        ParameterizedTypeReference<ECommerceProductImage> localReturnType = new ParameterizedTypeReference<ECommerceProductImage>() {};
+        ParameterizedTypeReference<ECommerceProductImage1> localReturnType = new ParameterizedTypeReference<ECommerceProductImage1>() {};
         return apiClient.invokeAPI("/ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}", HttpMethod.PATCH, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
@@ -2919,10 +2921,10 @@ public class EcommerceApi extends BaseApi {
      * @param productId The id for the product of a store. (required)
      * @param variantId The id for the product variant. (required)
      * @param body  (required)
-     * @return ECommerceProductVariant
+     * @return ECommerceProductVariant1
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ECommerceProductVariant patchEcommerceStoresIdProductsIdVariantsId(String storeId, String productId, String variantId, ECommerceProductVariant2 body) throws RestClientException {
+    public ECommerceProductVariant1 patchEcommerceStoresIdProductsIdVariantsId(String storeId, String productId, String variantId, ECommerceProductVariant2 body) throws RestClientException {
         return patchEcommerceStoresIdProductsIdVariantsIdWithHttpInfo(storeId, productId, variantId, body).getBody();
     }
 
@@ -2935,10 +2937,10 @@ public class EcommerceApi extends BaseApi {
      * @param productId The id for the product of a store. (required)
      * @param variantId The id for the product variant. (required)
      * @param body  (required)
-     * @return ResponseEntity&lt;ECommerceProductVariant&gt;
+     * @return ResponseEntity&lt;ECommerceProductVariant1&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ECommerceProductVariant> patchEcommerceStoresIdProductsIdVariantsIdWithHttpInfo(String storeId, String productId, String variantId, ECommerceProductVariant2 body) throws RestClientException {
+    public ResponseEntity<ECommerceProductVariant1> patchEcommerceStoresIdProductsIdVariantsIdWithHttpInfo(String storeId, String productId, String variantId, ECommerceProductVariant2 body) throws RestClientException {
         Object localVarPostBody = body;
         
         // verify the required parameter 'storeId' is set
@@ -2983,7 +2985,7 @@ public class EcommerceApi extends BaseApi {
 
         String[] localVarAuthNames = new String[] { "basicAuth" };
 
-        ParameterizedTypeReference<ECommerceProductVariant> localReturnType = new ParameterizedTypeReference<ECommerceProductVariant>() {};
+        ParameterizedTypeReference<ECommerceProductVariant1> localReturnType = new ParameterizedTypeReference<ECommerceProductVariant1>() {};
         return apiClient.invokeAPI("/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}", HttpMethod.PATCH, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
@@ -3503,10 +3505,10 @@ public class EcommerceApi extends BaseApi {
      * <p><b>0</b> - An error generated by the Mailchimp API.
      * @param storeId The store id. (required)
      * @param body  (required)
-     * @return ECommerceProduct
+     * @return ECommerceProduct2
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ECommerceProduct postEcommerceStoresIdProducts(String storeId, ECommerceProduct1 body) throws RestClientException {
+    public ECommerceProduct2 postEcommerceStoresIdProducts(String storeId, ECommerceProduct body) throws RestClientException {
         return postEcommerceStoresIdProductsWithHttpInfo(storeId, body).getBody();
     }
 
@@ -3517,10 +3519,10 @@ public class EcommerceApi extends BaseApi {
      * <p><b>0</b> - An error generated by the Mailchimp API.
      * @param storeId The store id. (required)
      * @param body  (required)
-     * @return ResponseEntity&lt;ECommerceProduct&gt;
+     * @return ResponseEntity&lt;ECommerceProduct2&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ECommerceProduct> postEcommerceStoresIdProductsWithHttpInfo(String storeId, ECommerceProduct1 body) throws RestClientException {
+    public ResponseEntity<ECommerceProduct2> postEcommerceStoresIdProductsWithHttpInfo(String storeId, ECommerceProduct body) throws RestClientException {
         Object localVarPostBody = body;
         
         // verify the required parameter 'storeId' is set
@@ -3553,7 +3555,7 @@ public class EcommerceApi extends BaseApi {
 
         String[] localVarAuthNames = new String[] { "basicAuth" };
 
-        ParameterizedTypeReference<ECommerceProduct> localReturnType = new ParameterizedTypeReference<ECommerceProduct>() {};
+        ParameterizedTypeReference<ECommerceProduct2> localReturnType = new ParameterizedTypeReference<ECommerceProduct2>() {};
         return apiClient.invokeAPI("/ecommerce/stores/{store_id}/products", HttpMethod.POST, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
@@ -3564,10 +3566,10 @@ public class EcommerceApi extends BaseApi {
      * @param storeId The store id. (required)
      * @param productId The id for the product of a store. (required)
      * @param body  (required)
-     * @return ECommerceProductImage
+     * @return ECommerceProductImage1
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ECommerceProductImage postEcommerceStoresIdProductsIdImages(String storeId, String productId, ECommerceProductImage1 body) throws RestClientException {
+    public ECommerceProductImage1 postEcommerceStoresIdProductsIdImages(String storeId, String productId, ECommerceProductImage body) throws RestClientException {
         return postEcommerceStoresIdProductsIdImagesWithHttpInfo(storeId, productId, body).getBody();
     }
 
@@ -3579,10 +3581,10 @@ public class EcommerceApi extends BaseApi {
      * @param storeId The store id. (required)
      * @param productId The id for the product of a store. (required)
      * @param body  (required)
-     * @return ResponseEntity&lt;ECommerceProductImage&gt;
+     * @return ResponseEntity&lt;ECommerceProductImage1&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ECommerceProductImage> postEcommerceStoresIdProductsIdImagesWithHttpInfo(String storeId, String productId, ECommerceProductImage1 body) throws RestClientException {
+    public ResponseEntity<ECommerceProductImage1> postEcommerceStoresIdProductsIdImagesWithHttpInfo(String storeId, String productId, ECommerceProductImage body) throws RestClientException {
         Object localVarPostBody = body;
         
         // verify the required parameter 'storeId' is set
@@ -3621,7 +3623,7 @@ public class EcommerceApi extends BaseApi {
 
         String[] localVarAuthNames = new String[] { "basicAuth" };
 
-        ParameterizedTypeReference<ECommerceProductImage> localReturnType = new ParameterizedTypeReference<ECommerceProductImage>() {};
+        ParameterizedTypeReference<ECommerceProductImage1> localReturnType = new ParameterizedTypeReference<ECommerceProductImage1>() {};
         return apiClient.invokeAPI("/ecommerce/stores/{store_id}/products/{product_id}/images", HttpMethod.POST, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
@@ -3632,10 +3634,10 @@ public class EcommerceApi extends BaseApi {
      * @param storeId The store id. (required)
      * @param productId The id for the product of a store. (required)
      * @param body  (required)
-     * @return ECommerceProductVariant
+     * @return ECommerceProductVariant1
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ECommerceProductVariant postEcommerceStoresIdProductsIdVariants(String storeId, String productId, ECommerceProductVariant1 body) throws RestClientException {
+    public ECommerceProductVariant1 postEcommerceStoresIdProductsIdVariants(String storeId, String productId, ECommerceProductVariant body) throws RestClientException {
         return postEcommerceStoresIdProductsIdVariantsWithHttpInfo(storeId, productId, body).getBody();
     }
 
@@ -3647,10 +3649,10 @@ public class EcommerceApi extends BaseApi {
      * @param storeId The store id. (required)
      * @param productId The id for the product of a store. (required)
      * @param body  (required)
-     * @return ResponseEntity&lt;ECommerceProductVariant&gt;
+     * @return ResponseEntity&lt;ECommerceProductVariant1&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ECommerceProductVariant> postEcommerceStoresIdProductsIdVariantsWithHttpInfo(String storeId, String productId, ECommerceProductVariant1 body) throws RestClientException {
+    public ResponseEntity<ECommerceProductVariant1> postEcommerceStoresIdProductsIdVariantsWithHttpInfo(String storeId, String productId, ECommerceProductVariant body) throws RestClientException {
         Object localVarPostBody = body;
         
         // verify the required parameter 'storeId' is set
@@ -3689,7 +3691,7 @@ public class EcommerceApi extends BaseApi {
 
         String[] localVarAuthNames = new String[] { "basicAuth" };
 
-        ParameterizedTypeReference<ECommerceProductVariant> localReturnType = new ParameterizedTypeReference<ECommerceProductVariant>() {};
+        ParameterizedTypeReference<ECommerceProductVariant1> localReturnType = new ParameterizedTypeReference<ECommerceProductVariant1>() {};
         return apiClient.invokeAPI("/ecommerce/stores/{store_id}/products/{product_id}/variants", HttpMethod.POST, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
@@ -3889,6 +3891,142 @@ public class EcommerceApi extends BaseApi {
         return apiClient.invokeAPI("/ecommerce/stores/{store_id}/customers/{customer_id}", HttpMethod.PUT, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
+     * Add or update order
+     * Add or update an order.
+     * <p><b>200</b> - 
+     * <p><b>0</b> - An error generated by the Mailchimp API.
+     * @param storeId The store id. (required)
+     * @param orderId The id for the order in a store. (required)
+     * @param body  (required)
+     * @return ECommerceOrder
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ECommerceOrder putEcommerceStoresIdOrdersId(String storeId, String orderId, ECommerceOrder2 body) throws RestClientException {
+        return putEcommerceStoresIdOrdersIdWithHttpInfo(storeId, orderId, body).getBody();
+    }
+
+    /**
+     * Add or update order
+     * Add or update an order.
+     * <p><b>200</b> - 
+     * <p><b>0</b> - An error generated by the Mailchimp API.
+     * @param storeId The store id. (required)
+     * @param orderId The id for the order in a store. (required)
+     * @param body  (required)
+     * @return ResponseEntity&lt;ECommerceOrder&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<ECommerceOrder> putEcommerceStoresIdOrdersIdWithHttpInfo(String storeId, String orderId, ECommerceOrder2 body) throws RestClientException {
+        Object localVarPostBody = body;
+        
+        // verify the required parameter 'storeId' is set
+        if (storeId == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'storeId' when calling putEcommerceStoresIdOrdersId");
+        }
+        
+        // verify the required parameter 'orderId' is set
+        if (orderId == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'orderId' when calling putEcommerceStoresIdOrdersId");
+        }
+        
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'body' when calling putEcommerceStoresIdOrdersId");
+        }
+        
+        // create path and map variables
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        uriVariables.put("store_id", storeId);
+        uriVariables.put("order_id", orderId);
+
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "application/problem+json"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "application/json"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+
+        ParameterizedTypeReference<ECommerceOrder> localReturnType = new ParameterizedTypeReference<ECommerceOrder>() {};
+        return apiClient.invokeAPI("/ecommerce/stores/{store_id}/orders/{order_id}", HttpMethod.PUT, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+    /**
+     * Create or update product
+     * Update a specific product.
+     * <p><b>200</b> - 
+     * <p><b>0</b> - An error generated by the Mailchimp API.
+     * @param storeId The store id. (required)
+     * @param productId The id for the product of a store. (required)
+     * @param body  (required)
+     * @return ECommerceProduct2
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ECommerceProduct2 putEcommerceStoresIdProductsId(String storeId, String productId, ECommerceProduct1 body) throws RestClientException {
+        return putEcommerceStoresIdProductsIdWithHttpInfo(storeId, productId, body).getBody();
+    }
+
+    /**
+     * Create or update product
+     * Update a specific product.
+     * <p><b>200</b> - 
+     * <p><b>0</b> - An error generated by the Mailchimp API.
+     * @param storeId The store id. (required)
+     * @param productId The id for the product of a store. (required)
+     * @param body  (required)
+     * @return ResponseEntity&lt;ECommerceProduct2&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<ECommerceProduct2> putEcommerceStoresIdProductsIdWithHttpInfo(String storeId, String productId, ECommerceProduct1 body) throws RestClientException {
+        Object localVarPostBody = body;
+        
+        // verify the required parameter 'storeId' is set
+        if (storeId == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'storeId' when calling putEcommerceStoresIdProductsId");
+        }
+        
+        // verify the required parameter 'productId' is set
+        if (productId == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'productId' when calling putEcommerceStoresIdProductsId");
+        }
+        
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'body' when calling putEcommerceStoresIdProductsId");
+        }
+        
+        // create path and map variables
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        uriVariables.put("store_id", storeId);
+        uriVariables.put("product_id", productId);
+
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "application/problem+json"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "application/json"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+
+        ParameterizedTypeReference<ECommerceProduct2> localReturnType = new ParameterizedTypeReference<ECommerceProduct2>() {};
+        return apiClient.invokeAPI("/ecommerce/stores/{store_id}/products/{product_id}", HttpMethod.PUT, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+    /**
      * Add or update product variant
      * Add or update a product variant.
      * <p><b>200</b> - 
@@ -3897,10 +4035,10 @@ public class EcommerceApi extends BaseApi {
      * @param productId The id for the product of a store. (required)
      * @param variantId The id for the product variant. (required)
      * @param body  (required)
-     * @return ECommerceProductVariant
+     * @return ECommerceProductVariant1
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ECommerceProductVariant putEcommerceStoresIdProductsIdVariantsId(String storeId, String productId, String variantId, ECommerceProductVariant1 body) throws RestClientException {
+    public ECommerceProductVariant1 putEcommerceStoresIdProductsIdVariantsId(String storeId, String productId, String variantId, ECommerceProductVariant body) throws RestClientException {
         return putEcommerceStoresIdProductsIdVariantsIdWithHttpInfo(storeId, productId, variantId, body).getBody();
     }
 
@@ -3913,10 +4051,10 @@ public class EcommerceApi extends BaseApi {
      * @param productId The id for the product of a store. (required)
      * @param variantId The id for the product variant. (required)
      * @param body  (required)
-     * @return ResponseEntity&lt;ECommerceProductVariant&gt;
+     * @return ResponseEntity&lt;ECommerceProductVariant1&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ECommerceProductVariant> putEcommerceStoresIdProductsIdVariantsIdWithHttpInfo(String storeId, String productId, String variantId, ECommerceProductVariant1 body) throws RestClientException {
+    public ResponseEntity<ECommerceProductVariant1> putEcommerceStoresIdProductsIdVariantsIdWithHttpInfo(String storeId, String productId, String variantId, ECommerceProductVariant body) throws RestClientException {
         Object localVarPostBody = body;
         
         // verify the required parameter 'storeId' is set
@@ -3961,7 +4099,7 @@ public class EcommerceApi extends BaseApi {
 
         String[] localVarAuthNames = new String[] { "basicAuth" };
 
-        ParameterizedTypeReference<ECommerceProductVariant> localReturnType = new ParameterizedTypeReference<ECommerceProductVariant>() {};
+        ParameterizedTypeReference<ECommerceProductVariant1> localReturnType = new ParameterizedTypeReference<ECommerceProductVariant1>() {};
         return apiClient.invokeAPI("/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}", HttpMethod.PUT, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
 

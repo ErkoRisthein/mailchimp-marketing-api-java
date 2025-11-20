@@ -39,7 +39,7 @@ public class Example {
 
         ActivityFeedApi apiInstance = new ActivityFeedApi(defaultClient);
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
-        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.
+        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0.
         try {
             GetActivityFeedChimpChatter200Response result = apiInstance.getActivityFeedChimpChatter(count, offset);
             System.out.println(result);
@@ -60,7 +60,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |
-| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
+| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
 
 ### Return type
 

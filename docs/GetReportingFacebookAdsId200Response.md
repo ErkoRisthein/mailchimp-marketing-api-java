@@ -77,7 +77,7 @@
 | SOMEPAUSED | &quot;somepaused&quot; |
 | DRAFT | &quot;draft&quot; |
 | COMPLETED | &quot;completed&quot; |
-| PARTIALREJECTED | &quot;partialRejected&quot; |
+| PARTIAL_REJECTED | &quot;partialRejected&quot; |
 | PENDING | &quot;pending&quot; |
 | REJECTED | &quot;rejected&quot; |
 | PUBLISHED | &quot;published&quot; |

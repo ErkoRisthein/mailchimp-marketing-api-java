@@ -42,7 +42,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-26T16:39:59.516441+03:00[Europe/Helsinki]", comments = "Generator version: 7.5.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:12:19.705784+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class CampaignsApi extends BaseApi {
 
     public CampaignsApi() {
@@ -169,7 +169,7 @@ public class CampaignsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param type The campaign type. (optional)
      * @param status The status of the campaign. (optional)
      * @param beforeSendTime Restrict the response to campaigns sent before the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
@@ -197,7 +197,7 @@ public class CampaignsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param type The campaign type. (optional)
      * @param status The status of the campaign. (optional)
      * @param beforeSendTime Restrict the response to campaigns sent before the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
@@ -261,11 +261,12 @@ public class CampaignsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param includeResendShortcutEligibility Return the &#x60;resend_shortcut_eligibility&#x60; field in the response, which tells you if the campaign is eligible for the various Campaign Resend Shortcuts offered. (optional)
+     * @param includeResendShortcutUsage Return the &#x60;resend_shortcut_usage&#x60; field in the response.  This includes information about campaigns related by a shortcut. (optional)
      * @return Campaign
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public Campaign getCampaignsId(String campaignId, List<String> fields, List<String> excludeFields, Boolean includeResendShortcutEligibility) throws RestClientException {
-        return getCampaignsIdWithHttpInfo(campaignId, fields, excludeFields, includeResendShortcutEligibility).getBody();
+    public Campaign getCampaignsId(String campaignId, List<String> fields, List<String> excludeFields, Boolean includeResendShortcutEligibility, Boolean includeResendShortcutUsage) throws RestClientException {
+        return getCampaignsIdWithHttpInfo(campaignId, fields, excludeFields, includeResendShortcutEligibility, includeResendShortcutUsage).getBody();
     }
 
     /**
@@ -277,10 +278,11 @@ public class CampaignsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param includeResendShortcutEligibility Return the &#x60;resend_shortcut_eligibility&#x60; field in the response, which tells you if the campaign is eligible for the various Campaign Resend Shortcuts offered. (optional)
+     * @param includeResendShortcutUsage Return the &#x60;resend_shortcut_usage&#x60; field in the response.  This includes information about campaigns related by a shortcut. (optional)
      * @return ResponseEntity&lt;Campaign&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Campaign> getCampaignsIdWithHttpInfo(String campaignId, List<String> fields, List<String> excludeFields, Boolean includeResendShortcutEligibility) throws RestClientException {
+    public ResponseEntity<Campaign> getCampaignsIdWithHttpInfo(String campaignId, List<String> fields, List<String> excludeFields, Boolean includeResendShortcutEligibility, Boolean includeResendShortcutUsage) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'campaignId' is set
@@ -300,6 +302,7 @@ public class CampaignsApi extends BaseApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "exclude_fields", excludeFields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "include_resend_shortcut_eligibility", includeResendShortcutEligibility));
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "include_resend_shortcut_usage", includeResendShortcutUsage));
         
 
         final String[] localVarAccepts = { 

@@ -61,6 +61,8 @@ All URIs are relative to *https://server.api.mailchimp.com/3.0*
 | [**postEcommerceStoresIdPromocodes**](EcommerceApi.md#postEcommerceStoresIdPromocodes) | **POST** /ecommerce/stores/{store_id}/promo-rules/{promo_rule_id}/promo-codes | Add promo code |
 | [**postEcommerceStoresIdPromorules**](EcommerceApi.md#postEcommerceStoresIdPromorules) | **POST** /ecommerce/stores/{store_id}/promo-rules | Add promo rule |
 | [**putEcommerceStoresIdCustomersId**](EcommerceApi.md#putEcommerceStoresIdCustomersId) | **PUT** /ecommerce/stores/{store_id}/customers/{customer_id} | Add or update customer |
+| [**putEcommerceStoresIdOrdersId**](EcommerceApi.md#putEcommerceStoresIdOrdersId) | **PUT** /ecommerce/stores/{store_id}/orders/{order_id} | Add or update order |
+| [**putEcommerceStoresIdProductsId**](EcommerceApi.md#putEcommerceStoresIdProductsId) | **PUT** /ecommerce/stores/{store_id}/products/{product_id} | Create or update product |
 | [**putEcommerceStoresIdProductsIdVariantsId**](EcommerceApi.md#putEcommerceStoresIdProductsIdVariantsId) | **PUT** /ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id} | Add or update product variant |
 
 
@@ -921,7 +923,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
-        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.
+        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0.
         String campaignId = "campaignId_example"; // String | Restrict results to orders with a specific `campaign_id` value.
         String outreachId = "outreachId_example"; // String | Restrict results to orders with a specific `outreach_id` value.
         String customerId = "customerId_example"; // String | Restrict results to orders made by a specific customer.
@@ -948,7 +950,7 @@ public class Example {
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |
-| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
+| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
 | **campaignId** | **String**| Restrict results to orders with a specific &#x60;campaign_id&#x60; value. | [optional] |
 | **outreachId** | **String**| Restrict results to orders with a specific &#x60;outreach_id&#x60; value. | [optional] |
 | **customerId** | **String**| Restrict results to orders made by a specific customer. | [optional] |
@@ -1008,7 +1010,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
-        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.
+        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0.
         try {
             ECommerceStores result = apiInstance.getEcommerceStores(fields, excludeFields, count, offset);
             System.out.println(result);
@@ -1031,7 +1033,7 @@ public class Example {
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |
-| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
+| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
 
 ### Return type
 
@@ -1165,7 +1167,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
-        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.
+        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0.
         try {
             Carts result = apiInstance.getEcommerceStoresIdCarts(storeId, fields, excludeFields, count, offset);
             System.out.println(result);
@@ -1189,7 +1191,7 @@ public class Example {
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |
-| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
+| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
 
 ### Return type
 
@@ -1326,7 +1328,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
-        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.
+        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0.
         try {
             CartLines result = apiInstance.getEcommerceStoresIdCartsIdLines(storeId, cartId, fields, excludeFields, count, offset);
             System.out.println(result);
@@ -1351,7 +1353,7 @@ public class Example {
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |
-| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
+| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
 
 ### Return type
 
@@ -1489,7 +1491,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
-        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.
+        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0.
         String emailAddress = "emailAddress_example"; // String | Restrict the response to customers with the email address.
         try {
             Customers result = apiInstance.getEcommerceStoresIdCustomers(storeId, fields, excludeFields, count, offset, emailAddress);
@@ -1514,7 +1516,7 @@ public class Example {
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |
-| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
+| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
 | **emailAddress** | **String**| Restrict the response to customers with the email address. | [optional] |
 
 ### Return type
@@ -1651,7 +1653,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
-        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.
+        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0.
         String customerId = "customerId_example"; // String | Restrict results to orders made by a specific customer.
         Boolean hasOutreach = true; // Boolean | Restrict results to orders that have an outreach attached. For example, an email campaign or Facebook ad.
         String campaignId = "campaignId_example"; // String | Restrict results to orders with a specific `campaign_id` value.
@@ -1679,7 +1681,7 @@ public class Example {
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |
-| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
+| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
 | **customerId** | **String**| Restrict results to orders made by a specific customer. | [optional] |
 | **hasOutreach** | **Boolean**| Restrict results to orders that have an outreach attached. For example, an email campaign or Facebook ad. | [optional] |
 | **campaignId** | **String**| Restrict results to orders with a specific &#x60;campaign_id&#x60; value. | [optional] |
@@ -1820,7 +1822,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
-        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.
+        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0.
         try {
             OrderLines result = apiInstance.getEcommerceStoresIdOrdersIdLines(storeId, orderId, fields, excludeFields, count, offset);
             System.out.println(result);
@@ -1845,7 +1847,7 @@ public class Example {
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |
-| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
+| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
 
 ### Return type
 
@@ -1983,7 +1985,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
-        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.
+        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0.
         try {
             Products result = apiInstance.getEcommerceStoresIdProducts(storeId, fields, excludeFields, count, offset);
             System.out.println(result);
@@ -2007,7 +2009,7 @@ public class Example {
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |
-| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
+| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
 
 ### Return type
 
@@ -2032,7 +2034,7 @@ public class Example {
 
 ## getEcommerceStoresIdProductsId
 
-> ECommerceProduct getEcommerceStoresIdProductsId(storeId, productId, fields, excludeFields)
+> ECommerceProduct2 getEcommerceStoresIdProductsId(storeId, productId, fields, excludeFields)
 
 Get product info
 
@@ -2065,7 +2067,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         try {
-            ECommerceProduct result = apiInstance.getEcommerceStoresIdProductsId(storeId, productId, fields, excludeFields);
+            ECommerceProduct2 result = apiInstance.getEcommerceStoresIdProductsId(storeId, productId, fields, excludeFields);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EcommerceApi#getEcommerceStoresIdProductsId");
@@ -2090,7 +2092,7 @@ public class Example {
 
 ### Return type
 
-[**ECommerceProduct**](ECommerceProduct.md)
+[**ECommerceProduct2**](ECommerceProduct2.md)
 
 ### Authorization
 
@@ -2144,7 +2146,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
-        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.
+        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0.
         try {
             EcommerceProductImages result = apiInstance.getEcommerceStoresIdProductsIdImages(storeId, productId, fields, excludeFields, count, offset);
             System.out.println(result);
@@ -2169,7 +2171,7 @@ public class Example {
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |
-| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
+| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
 
 ### Return type
 
@@ -2194,7 +2196,7 @@ public class Example {
 
 ## getEcommerceStoresIdProductsIdImagesId
 
-> ECommerceProductImage getEcommerceStoresIdProductsIdImagesId(storeId, productId, imageId, fields, excludeFields)
+> ECommerceProductImage1 getEcommerceStoresIdProductsIdImagesId(storeId, productId, imageId, fields, excludeFields)
 
 Get product image info
 
@@ -2228,7 +2230,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         try {
-            ECommerceProductImage result = apiInstance.getEcommerceStoresIdProductsIdImagesId(storeId, productId, imageId, fields, excludeFields);
+            ECommerceProductImage1 result = apiInstance.getEcommerceStoresIdProductsIdImagesId(storeId, productId, imageId, fields, excludeFields);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EcommerceApi#getEcommerceStoresIdProductsIdImagesId");
@@ -2254,7 +2256,7 @@ public class Example {
 
 ### Return type
 
-[**ECommerceProductImage**](ECommerceProductImage.md)
+[**ECommerceProductImage1**](ECommerceProductImage1.md)
 
 ### Authorization
 
@@ -2308,7 +2310,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
-        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.
+        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0.
         try {
             EcommerceProductVariants result = apiInstance.getEcommerceStoresIdProductsIdVariants(storeId, productId, fields, excludeFields, count, offset);
             System.out.println(result);
@@ -2333,7 +2335,7 @@ public class Example {
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |
-| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
+| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
 
 ### Return type
 
@@ -2358,7 +2360,7 @@ public class Example {
 
 ## getEcommerceStoresIdProductsIdVariantsId
 
-> ECommerceProductVariant getEcommerceStoresIdProductsIdVariantsId(storeId, productId, variantId, fields, excludeFields)
+> ECommerceProductVariant1 getEcommerceStoresIdProductsIdVariantsId(storeId, productId, variantId, fields, excludeFields)
 
 Get product variant info
 
@@ -2392,7 +2394,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         try {
-            ECommerceProductVariant result = apiInstance.getEcommerceStoresIdProductsIdVariantsId(storeId, productId, variantId, fields, excludeFields);
+            ECommerceProductVariant1 result = apiInstance.getEcommerceStoresIdProductsIdVariantsId(storeId, productId, variantId, fields, excludeFields);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EcommerceApi#getEcommerceStoresIdProductsIdVariantsId");
@@ -2418,7 +2420,7 @@ public class Example {
 
 ### Return type
 
-[**ECommerceProductVariant**](ECommerceProductVariant.md)
+[**ECommerceProductVariant1**](ECommerceProductVariant1.md)
 
 ### Authorization
 
@@ -2472,7 +2474,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
-        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.
+        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0.
         try {
             PromoCodes result = apiInstance.getEcommerceStoresIdPromocodes(promoRuleId, storeId, fields, excludeFields, count, offset);
             System.out.println(result);
@@ -2497,7 +2499,7 @@ public class Example {
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |
-| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
+| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
 
 ### Return type
 
@@ -2635,7 +2637,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
-        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.
+        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0.
         try {
             PromoRules result = apiInstance.getEcommerceStoresIdPromorules(storeId, fields, excludeFields, count, offset);
             System.out.println(result);
@@ -2659,7 +2661,7 @@ public class Example {
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |
-| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
+| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
 
 ### Return type
 
@@ -3101,7 +3103,7 @@ public class Example {
         EcommerceApi apiInstance = new EcommerceApi(defaultClient);
         String storeId = "storeId_example"; // String | The store id.
         String orderId = "orderId_example"; // String | The id for the order in a store.
-        ECommerceOrder2 body = new ECommerceOrder2(); // ECommerceOrder2 | 
+        ECommerceOrder3 body = new ECommerceOrder3(); // ECommerceOrder3 | 
         try {
             ECommerceOrder result = apiInstance.patchEcommerceStoresIdOrdersId(storeId, orderId, body);
             System.out.println(result);
@@ -3123,7 +3125,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **storeId** | **String**| The store id. | |
 | **orderId** | **String**| The id for the order in a store. | |
-| **body** | [**ECommerceOrder2**](ECommerceOrder2.md)|  | |
+| **body** | [**ECommerceOrder3**](ECommerceOrder3.md)|  | |
 
 ### Return type
 
@@ -3179,7 +3181,7 @@ public class Example {
         String storeId = "storeId_example"; // String | The store id.
         String orderId = "orderId_example"; // String | The id for the order in a store.
         String lineId = "lineId_example"; // String | The id for the line item of an order.
-        ECommerceOrderLineItem2 body = new ECommerceOrderLineItem2(); // ECommerceOrderLineItem2 | 
+        ECommerceOrderLineItem3 body = new ECommerceOrderLineItem3(); // ECommerceOrderLineItem3 | 
         try {
             ECommerceOrderLineItem result = apiInstance.patchEcommerceStoresIdOrdersIdLinesId(storeId, orderId, lineId, body);
             System.out.println(result);
@@ -3202,7 +3204,7 @@ public class Example {
 | **storeId** | **String**| The store id. | |
 | **orderId** | **String**| The id for the order in a store. | |
 | **lineId** | **String**| The id for the line item of an order. | |
-| **body** | [**ECommerceOrderLineItem2**](ECommerceOrderLineItem2.md)|  | |
+| **body** | [**ECommerceOrderLineItem3**](ECommerceOrderLineItem3.md)|  | |
 
 ### Return type
 
@@ -3227,7 +3229,7 @@ public class Example {
 
 ## patchEcommerceStoresIdProductsId
 
-> ECommerceProduct patchEcommerceStoresIdProductsId(storeId, productId, body)
+> ECommerceProduct2 patchEcommerceStoresIdProductsId(storeId, productId, body)
 
 Update product
 
@@ -3257,9 +3259,9 @@ public class Example {
         EcommerceApi apiInstance = new EcommerceApi(defaultClient);
         String storeId = "storeId_example"; // String | The store id.
         String productId = "productId_example"; // String | The id for the product of a store.
-        ECommerceProduct2 body = new ECommerceProduct2(); // ECommerceProduct2 | 
+        ECommerceProduct3 body = new ECommerceProduct3(); // ECommerceProduct3 | 
         try {
-            ECommerceProduct result = apiInstance.patchEcommerceStoresIdProductsId(storeId, productId, body);
+            ECommerceProduct2 result = apiInstance.patchEcommerceStoresIdProductsId(storeId, productId, body);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EcommerceApi#patchEcommerceStoresIdProductsId");
@@ -3279,11 +3281,11 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **storeId** | **String**| The store id. | |
 | **productId** | **String**| The id for the product of a store. | |
-| **body** | [**ECommerceProduct2**](ECommerceProduct2.md)|  | |
+| **body** | [**ECommerceProduct3**](ECommerceProduct3.md)|  | |
 
 ### Return type
 
-[**ECommerceProduct**](ECommerceProduct.md)
+[**ECommerceProduct2**](ECommerceProduct2.md)
 
 ### Authorization
 
@@ -3304,7 +3306,7 @@ public class Example {
 
 ## patchEcommerceStoresIdProductsIdImagesId
 
-> ECommerceProductImage patchEcommerceStoresIdProductsIdImagesId(storeId, productId, imageId, body)
+> ECommerceProductImage1 patchEcommerceStoresIdProductsIdImagesId(storeId, productId, imageId, body)
 
 Update product image
 
@@ -3337,7 +3339,7 @@ public class Example {
         String imageId = "imageId_example"; // String | The id for the product image.
         ECommerceProductImage2 body = new ECommerceProductImage2(); // ECommerceProductImage2 | 
         try {
-            ECommerceProductImage result = apiInstance.patchEcommerceStoresIdProductsIdImagesId(storeId, productId, imageId, body);
+            ECommerceProductImage1 result = apiInstance.patchEcommerceStoresIdProductsIdImagesId(storeId, productId, imageId, body);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EcommerceApi#patchEcommerceStoresIdProductsIdImagesId");
@@ -3362,7 +3364,7 @@ public class Example {
 
 ### Return type
 
-[**ECommerceProductImage**](ECommerceProductImage.md)
+[**ECommerceProductImage1**](ECommerceProductImage1.md)
 
 ### Authorization
 
@@ -3383,7 +3385,7 @@ public class Example {
 
 ## patchEcommerceStoresIdProductsIdVariantsId
 
-> ECommerceProductVariant patchEcommerceStoresIdProductsIdVariantsId(storeId, productId, variantId, body)
+> ECommerceProductVariant1 patchEcommerceStoresIdProductsIdVariantsId(storeId, productId, variantId, body)
 
 Update product variant
 
@@ -3416,7 +3418,7 @@ public class Example {
         String variantId = "variantId_example"; // String | The id for the product variant.
         ECommerceProductVariant2 body = new ECommerceProductVariant2(); // ECommerceProductVariant2 | 
         try {
-            ECommerceProductVariant result = apiInstance.patchEcommerceStoresIdProductsIdVariantsId(storeId, productId, variantId, body);
+            ECommerceProductVariant1 result = apiInstance.patchEcommerceStoresIdProductsIdVariantsId(storeId, productId, variantId, body);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EcommerceApi#patchEcommerceStoresIdProductsIdVariantsId");
@@ -3441,7 +3443,7 @@ public class Example {
 
 ### Return type
 
-[**ECommerceProductVariant**](ECommerceProductVariant.md)
+[**ECommerceProductVariant1**](ECommerceProductVariant1.md)
 
 ### Authorization
 
@@ -4070,7 +4072,7 @@ public class Example {
 
 ## postEcommerceStoresIdProducts
 
-> ECommerceProduct postEcommerceStoresIdProducts(storeId, body)
+> ECommerceProduct2 postEcommerceStoresIdProducts(storeId, body)
 
 Add product
 
@@ -4099,9 +4101,9 @@ public class Example {
 
         EcommerceApi apiInstance = new EcommerceApi(defaultClient);
         String storeId = "storeId_example"; // String | The store id.
-        ECommerceProduct1 body = new ECommerceProduct1(); // ECommerceProduct1 | 
+        ECommerceProduct body = new ECommerceProduct(); // ECommerceProduct | 
         try {
-            ECommerceProduct result = apiInstance.postEcommerceStoresIdProducts(storeId, body);
+            ECommerceProduct2 result = apiInstance.postEcommerceStoresIdProducts(storeId, body);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EcommerceApi#postEcommerceStoresIdProducts");
@@ -4120,11 +4122,11 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **storeId** | **String**| The store id. | |
-| **body** | [**ECommerceProduct1**](ECommerceProduct1.md)|  | |
+| **body** | [**ECommerceProduct**](ECommerceProduct.md)|  | |
 
 ### Return type
 
-[**ECommerceProduct**](ECommerceProduct.md)
+[**ECommerceProduct2**](ECommerceProduct2.md)
 
 ### Authorization
 
@@ -4145,7 +4147,7 @@ public class Example {
 
 ## postEcommerceStoresIdProductsIdImages
 
-> ECommerceProductImage postEcommerceStoresIdProductsIdImages(storeId, productId, body)
+> ECommerceProductImage1 postEcommerceStoresIdProductsIdImages(storeId, productId, body)
 
 Add product image
 
@@ -4175,9 +4177,9 @@ public class Example {
         EcommerceApi apiInstance = new EcommerceApi(defaultClient);
         String storeId = "storeId_example"; // String | The store id.
         String productId = "productId_example"; // String | The id for the product of a store.
-        ECommerceProductImage1 body = new ECommerceProductImage1(); // ECommerceProductImage1 | 
+        ECommerceProductImage body = new ECommerceProductImage(); // ECommerceProductImage | 
         try {
-            ECommerceProductImage result = apiInstance.postEcommerceStoresIdProductsIdImages(storeId, productId, body);
+            ECommerceProductImage1 result = apiInstance.postEcommerceStoresIdProductsIdImages(storeId, productId, body);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EcommerceApi#postEcommerceStoresIdProductsIdImages");
@@ -4197,11 +4199,11 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **storeId** | **String**| The store id. | |
 | **productId** | **String**| The id for the product of a store. | |
-| **body** | [**ECommerceProductImage1**](ECommerceProductImage1.md)|  | |
+| **body** | [**ECommerceProductImage**](ECommerceProductImage.md)|  | |
 
 ### Return type
 
-[**ECommerceProductImage**](ECommerceProductImage.md)
+[**ECommerceProductImage1**](ECommerceProductImage1.md)
 
 ### Authorization
 
@@ -4222,7 +4224,7 @@ public class Example {
 
 ## postEcommerceStoresIdProductsIdVariants
 
-> ECommerceProductVariant postEcommerceStoresIdProductsIdVariants(storeId, productId, body)
+> ECommerceProductVariant1 postEcommerceStoresIdProductsIdVariants(storeId, productId, body)
 
 Add product variant
 
@@ -4252,9 +4254,9 @@ public class Example {
         EcommerceApi apiInstance = new EcommerceApi(defaultClient);
         String storeId = "storeId_example"; // String | The store id.
         String productId = "productId_example"; // String | The id for the product of a store.
-        ECommerceProductVariant1 body = new ECommerceProductVariant1(); // ECommerceProductVariant1 | 
+        ECommerceProductVariant body = new ECommerceProductVariant(); // ECommerceProductVariant | 
         try {
-            ECommerceProductVariant result = apiInstance.postEcommerceStoresIdProductsIdVariants(storeId, productId, body);
+            ECommerceProductVariant1 result = apiInstance.postEcommerceStoresIdProductsIdVariants(storeId, productId, body);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EcommerceApi#postEcommerceStoresIdProductsIdVariants");
@@ -4274,11 +4276,11 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **storeId** | **String**| The store id. | |
 | **productId** | **String**| The id for the product of a store. | |
-| **body** | [**ECommerceProductVariant1**](ECommerceProductVariant1.md)|  | |
+| **body** | [**ECommerceProductVariant**](ECommerceProductVariant.md)|  | |
 
 ### Return type
 
-[**ECommerceProductVariant**](ECommerceProductVariant.md)
+[**ECommerceProductVariant1**](ECommerceProductVariant1.md)
 
 ### Authorization
 
@@ -4526,9 +4528,163 @@ public class Example {
 | **0** | An error generated by the Mailchimp API. |  -  |
 
 
+## putEcommerceStoresIdOrdersId
+
+> ECommerceOrder putEcommerceStoresIdOrdersId(storeId, orderId, body)
+
+Add or update order
+
+Add or update an order.
+
+### Example
+
+```java
+// Import classes:
+import io.github.erkoristhein.mailchimp.marketing.ApiClient;
+import io.github.erkoristhein.mailchimp.marketing.ApiException;
+import io.github.erkoristhein.mailchimp.marketing.Configuration;
+import io.github.erkoristhein.mailchimp.marketing.auth.*;
+import io.github.erkoristhein.mailchimp.marketing.models.*;
+import io.github.erkoristhein.mailchimp.marketing.api.EcommerceApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://server.api.mailchimp.com/3.0");
+        
+        // Configure HTTP basic authorization: basicAuth
+        HttpBasicAuth basicAuth = (HttpBasicAuth) defaultClient.getAuthentication("basicAuth");
+        basicAuth.setUsername("YOUR USERNAME");
+        basicAuth.setPassword("YOUR PASSWORD");
+
+        EcommerceApi apiInstance = new EcommerceApi(defaultClient);
+        String storeId = "storeId_example"; // String | The store id.
+        String orderId = "orderId_example"; // String | The id for the order in a store.
+        ECommerceOrder2 body = new ECommerceOrder2(); // ECommerceOrder2 | 
+        try {
+            ECommerceOrder result = apiInstance.putEcommerceStoresIdOrdersId(storeId, orderId, body);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling EcommerceApi#putEcommerceStoresIdOrdersId");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **storeId** | **String**| The store id. | |
+| **orderId** | **String**| The id for the order in a store. | |
+| **body** | [**ECommerceOrder2**](ECommerceOrder2.md)|  | |
+
+### Return type
+
+[**ECommerceOrder**](ECommerceOrder.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json, application/problem+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** |  |  -  |
+| **0** | An error generated by the Mailchimp API. |  -  |
+
+
+## putEcommerceStoresIdProductsId
+
+> ECommerceProduct2 putEcommerceStoresIdProductsId(storeId, productId, body)
+
+Create or update product
+
+Update a specific product.
+
+### Example
+
+```java
+// Import classes:
+import io.github.erkoristhein.mailchimp.marketing.ApiClient;
+import io.github.erkoristhein.mailchimp.marketing.ApiException;
+import io.github.erkoristhein.mailchimp.marketing.Configuration;
+import io.github.erkoristhein.mailchimp.marketing.auth.*;
+import io.github.erkoristhein.mailchimp.marketing.models.*;
+import io.github.erkoristhein.mailchimp.marketing.api.EcommerceApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://server.api.mailchimp.com/3.0");
+        
+        // Configure HTTP basic authorization: basicAuth
+        HttpBasicAuth basicAuth = (HttpBasicAuth) defaultClient.getAuthentication("basicAuth");
+        basicAuth.setUsername("YOUR USERNAME");
+        basicAuth.setPassword("YOUR PASSWORD");
+
+        EcommerceApi apiInstance = new EcommerceApi(defaultClient);
+        String storeId = "storeId_example"; // String | The store id.
+        String productId = "productId_example"; // String | The id for the product of a store.
+        ECommerceProduct1 body = new ECommerceProduct1(); // ECommerceProduct1 | 
+        try {
+            ECommerceProduct2 result = apiInstance.putEcommerceStoresIdProductsId(storeId, productId, body);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling EcommerceApi#putEcommerceStoresIdProductsId");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **storeId** | **String**| The store id. | |
+| **productId** | **String**| The id for the product of a store. | |
+| **body** | [**ECommerceProduct1**](ECommerceProduct1.md)|  | |
+
+### Return type
+
+[**ECommerceProduct2**](ECommerceProduct2.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json, application/problem+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** |  |  -  |
+| **0** | An error generated by the Mailchimp API. |  -  |
+
+
 ## putEcommerceStoresIdProductsIdVariantsId
 
-> ECommerceProductVariant putEcommerceStoresIdProductsIdVariantsId(storeId, productId, variantId, body)
+> ECommerceProductVariant1 putEcommerceStoresIdProductsIdVariantsId(storeId, productId, variantId, body)
 
 Add or update product variant
 
@@ -4559,9 +4715,9 @@ public class Example {
         String storeId = "storeId_example"; // String | The store id.
         String productId = "productId_example"; // String | The id for the product of a store.
         String variantId = "variantId_example"; // String | The id for the product variant.
-        ECommerceProductVariant1 body = new ECommerceProductVariant1(); // ECommerceProductVariant1 | 
+        ECommerceProductVariant body = new ECommerceProductVariant(); // ECommerceProductVariant | 
         try {
-            ECommerceProductVariant result = apiInstance.putEcommerceStoresIdProductsIdVariantsId(storeId, productId, variantId, body);
+            ECommerceProductVariant1 result = apiInstance.putEcommerceStoresIdProductsIdVariantsId(storeId, productId, variantId, body);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EcommerceApi#putEcommerceStoresIdProductsIdVariantsId");
@@ -4582,11 +4738,11 @@ public class Example {
 | **storeId** | **String**| The store id. | |
 | **productId** | **String**| The id for the product of a store. | |
 | **variantId** | **String**| The id for the product variant. | |
-| **body** | [**ECommerceProductVariant1**](ECommerceProductVariant1.md)|  | |
+| **body** | [**ECommerceProductVariant**](ECommerceProductVariant.md)|  | |
 
 ### Return type
 
-[**ECommerceProductVariant**](ECommerceProductVariant.md)
+[**ECommerceProductVariant1**](ECommerceProductVariant1.md)
 
 ### Authorization
 

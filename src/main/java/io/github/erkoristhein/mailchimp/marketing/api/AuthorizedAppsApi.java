@@ -28,7 +28,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-26T16:39:59.516441+03:00[Europe/Helsinki]", comments = "Generator version: 7.5.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:12:19.705784+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class AuthorizedAppsApi extends BaseApi {
 
     public AuthorizedAppsApi() {
@@ -47,7 +47,7 @@ public class AuthorizedAppsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return GetAuthorizedApps200Response
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -63,7 +63,7 @@ public class AuthorizedAppsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return ResponseEntity&lt;GetAuthorizedApps200Response&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */

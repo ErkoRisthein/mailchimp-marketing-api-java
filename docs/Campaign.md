@@ -31,6 +31,7 @@ A summary of an individual campaign's settings and content.
 |**reportSummary** | [**CampaignReportSummary2**](CampaignReportSummary2.md) |  |  [optional] |
 |**deliveryStatus** | [**CampaignDeliveryStatus**](CampaignDeliveryStatus.md) |  |  [optional] |
 |**resendShortcutEligibility** | [**ResendShortcutEligibility**](ResendShortcutEligibility.md) |  |  [optional] |
+|**resendShortcutUsage** | [**ResendShortcutUsage**](ResendShortcutUsage.md) |  |  [optional] |
 |**links** | [**List&lt;ResourceLink&gt;**](ResourceLink.md) | A list of link types and descriptions for the API schema documents. |  [optional] [readonly] |
 
 

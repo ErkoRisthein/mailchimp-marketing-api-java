@@ -208,7 +208,7 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Integer count = 10; // Integer | The number of records to return. Default value is 10. Maximum value is 1000
-        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.
+        Integer offset = 0; // Integer | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0.
         String type = "regular"; // String | The campaign type.
         String status = "save"; // String | The status of the campaign.
         OffsetDateTime beforeSendTime = OffsetDateTime.now(); // OffsetDateTime | Restrict the response to campaigns sent before the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00.
@@ -243,7 +243,7 @@ public class Example {
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **count** | **Integer**| The number of records to return. Default value is 10. Maximum value is 1000 | [optional] [default to 10] |
-| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
+| **offset** | **Integer**| Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. | [optional] [default to 0] |
 | **type** | **String**| The campaign type. | [optional] [enum: regular, plaintext, absplit, rss, variate] |
 | **status** | **String**| The status of the campaign. | [optional] [enum: save, paused, schedule, sending, sent] |
 | **beforeSendTime** | **OffsetDateTime**| Restrict the response to campaigns sent before the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. | [optional] |
@@ -280,7 +280,7 @@ public class Example {
 
 ## getCampaignsId
 
-> Campaign getCampaignsId(campaignId, fields, excludeFields, includeResendShortcutEligibility)
+> Campaign getCampaignsId(campaignId, fields, excludeFields, includeResendShortcutEligibility, includeResendShortcutUsage)
 
 Get campaign info
 
@@ -312,8 +312,9 @@ public class Example {
         List<String> fields = Arrays.asList(); // List<String> | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
         List<String> excludeFields = Arrays.asList(); // List<String> | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
         Boolean includeResendShortcutEligibility = true; // Boolean | Return the `resend_shortcut_eligibility` field in the response, which tells you if the campaign is eligible for the various Campaign Resend Shortcuts offered.
+        Boolean includeResendShortcutUsage = true; // Boolean | Return the `resend_shortcut_usage` field in the response.  This includes information about campaigns related by a shortcut.
         try {
-            Campaign result = apiInstance.getCampaignsId(campaignId, fields, excludeFields, includeResendShortcutEligibility);
+            Campaign result = apiInstance.getCampaignsId(campaignId, fields, excludeFields, includeResendShortcutEligibility, includeResendShortcutUsage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CampaignsApi#getCampaignsId");
@@ -335,6 +336,7 @@ public class Example {
 | **fields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. | [optional] |
 | **excludeFields** | [**List&lt;String&gt;**](String.md)| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. | [optional] |
 | **includeResendShortcutEligibility** | **Boolean**| Return the &#x60;resend_shortcut_eligibility&#x60; field in the response, which tells you if the campaign is eligible for the various Campaign Resend Shortcuts offered. | [optional] |
+| **includeResendShortcutUsage** | **Boolean**| Return the &#x60;resend_shortcut_usage&#x60; field in the response.  This includes information about campaigns related by a shortcut. | [optional] |
 
 ### Return type
 

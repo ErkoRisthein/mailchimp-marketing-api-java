@@ -77,7 +77,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-26T16:39:59.516441+03:00[Europe/Helsinki]", comments = "Generator version: 7.5.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T12:12:19.705784+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class ListsApi extends BaseApi {
 
     public ListsApi() {
@@ -636,7 +636,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return CollectionOfTags
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -654,7 +654,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return ResponseEntity&lt;CollectionOfTags&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -707,7 +707,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param beforeDateCreated Restrict response to lists created before the set date. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
      * @param sinceDateCreated Restrict results to lists created after the set date. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
      * @param beforeCampaignLastSent Restrict results to lists created before the last campaign send date. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
@@ -732,7 +732,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param beforeDateCreated Restrict response to lists created before the set date. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
      * @param sinceDateCreated Restrict results to lists created after the set date. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
      * @param beforeCampaignLastSent Restrict results to lists created before the last campaign send date. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
@@ -852,7 +852,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return AbuseComplaints
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -869,7 +869,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return ResponseEntity&lt;AbuseComplaints&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -918,7 +918,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return AbuseComplaint
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -936,7 +936,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return ResponseEntity&lt;AbuseComplaint&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -988,7 +988,7 @@ public class ListsApi extends BaseApi {
      * <p><b>0</b> - An error generated by the Mailchimp API.
      * @param listId The unique ID for the list. (required)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @return ListActivity
@@ -1005,7 +1005,7 @@ public class ListsApi extends BaseApi {
      * <p><b>0</b> - An error generated by the Mailchimp API.
      * @param listId The unique ID for the list. (required)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @return ResponseEntity&lt;ListActivity&gt;
@@ -1114,7 +1114,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param sortField Returns files sorted by the specified field. (optional)
      * @param sortDir Determines the order direction for sorted results. (optional)
      * @return GrowthHistory
@@ -1133,7 +1133,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param sortField Returns files sorted by the specified field. (optional)
      * @param sortDir Determines the order direction for sorted results. (optional)
      * @return ResponseEntity&lt;GrowthHistory&gt;
@@ -1252,7 +1252,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param type Restrict results a type of interest group (optional)
      * @return InterestGroupings
      * @throws RestClientException if an error occurs while attempting to invoke the API
@@ -1270,7 +1270,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param type Restrict results a type of interest group (optional)
      * @return ResponseEntity&lt;InterestGroupings&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
@@ -1388,7 +1388,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return Interests
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -1406,7 +1406,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return ResponseEntity&lt;Interests&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -1594,7 +1594,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param emailType The email type. (optional)
      * @param status The subscriber&#39;s status. (optional)
      * @param sinceTimestampOpt Restrict results to subscribers who opted-in after the set timeframe. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
@@ -1626,7 +1626,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param emailType The email type. (optional)
      * @param status The subscriber&#39;s status. (optional)
      * @param sinceTimestampOpt Restrict results to subscribers who opted-in after the set timeframe. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
@@ -1842,7 +1842,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param activityFilters A comma-separated list of activity filters that correspond to a set of activity types, e.g \&quot;?activity_filters&#x3D;open,bounce,click\&quot;. (optional)
      * @return MemberActivityEvents1
      * @throws RestClientException if an error occurs while attempting to invoke the API
@@ -1861,7 +1861,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param activityFilters A comma-separated list of activity filters that correspond to a set of activity types, e.g \&quot;?activity_filters&#x3D;open,bounce,click\&quot;. (optional)
      * @return ResponseEntity&lt;MemberActivityEvents1&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
@@ -1916,7 +1916,7 @@ public class ListsApi extends BaseApi {
      * @param listId The unique ID for the list. (required)
      * @param subscriberHash The MD5 hash of the lowercase version of the list member&#39;s email address. This endpoint also accepts a list member&#39;s email address or contact_id. (required)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @return CollectionOfEvents
@@ -1934,7 +1934,7 @@ public class ListsApi extends BaseApi {
      * @param listId The unique ID for the list. (required)
      * @param subscriberHash The MD5 hash of the lowercase version of the list member&#39;s email address. This endpoint also accepts a list member&#39;s email address or contact_id. (required)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @return ResponseEntity&lt;CollectionOfEvents&gt;
@@ -2060,7 +2060,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return CollectionOfNotes
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -2080,7 +2080,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @return ResponseEntity&lt;CollectionOfNotes&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -2211,7 +2211,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param type The merge field type. (optional)
      * @param required Whether it&#39;s a required merge field. (optional)
      * @return CollectionOfMergeFields
@@ -2230,7 +2230,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param type The merge field type. (optional)
      * @param required Whether it&#39;s a required merge field. (optional)
      * @return ResponseEntity&lt;CollectionOfMergeFields&gt;
@@ -2426,7 +2426,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param includeCleaned Include cleaned members in response (optional)
      * @param includeTransactional Include transactional members in response (optional)
      * @param includeUnsubscribed Include unsubscribed members in response (optional)
@@ -2447,7 +2447,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param includeCleaned Include cleaned members in response (optional)
      * @param includeTransactional Include transactional members in response (optional)
      * @param includeUnsubscribed Include unsubscribed members in response (optional)
@@ -4280,7 +4280,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param type Limit results based on segment type. (optional)
      * @param sinceCreatedAt Restrict results to segments created after the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
      * @param beforeCreatedAt Restrict results to segments created before the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
@@ -4305,7 +4305,7 @@ public class ListsApi extends BaseApi {
      * @param fields A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. (optional)
      * @param excludeFields A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. (optional)
      * @param count The number of records to return. Default value is 10. Maximum value is 1000 (optional, default to 10)
-     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0. (optional, default to 0)
+     * @param offset Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. (optional, default to 0)
      * @param type Limit results based on segment type. (optional)
      * @param sinceCreatedAt Restrict results to segments created after the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)
      * @param beforeCreatedAt Restrict results to segments created before the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. (optional)

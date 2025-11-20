@@ -11,6 +11,7 @@ Determines if the campaign qualifies for the Campaign Resend Shortcuts. Only inc
 |**toNonOpeners** | [**ToNonOpeners**](ToNonOpeners.md) |  |  [optional] |
 |**toNewSubscribers** | [**ToNewSubscribers**](ToNewSubscribers.md) |  |  [optional] |
 |**toNonClickers** | [**ToNonClickers**](ToNonClickers.md) |  |  [optional] |
+|**toNonPurchasers** | [**ToNonPurchasers**](ToNonPurchasers.md) |  |  [optional] |
 
 
 

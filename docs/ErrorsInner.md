@@ -19,8 +19,8 @@
 
 | Name | Value |
 |---- | -----|
-| CONTACT_EXISTS | &quot;ERROR_CONTACT_EXISTS&quot; |
-| GENERIC | &quot;ERROR_GENERIC&quot; |
+| ERROR_CONTACT_EXISTS | &quot;ERROR_CONTACT_EXISTS&quot; |
+| ERROR_GENERIC | &quot;ERROR_GENERIC&quot; |
 
 
 

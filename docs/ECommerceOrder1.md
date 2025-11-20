@@ -11,6 +11,7 @@ Information about a specific order.
 |**id** | **String** | A unique identifier for the order. |  |
 |**customer** | [**ECommerceCustomer1**](ECommerceCustomer1.md) |  |  |
 |**campaignId** | **String** | A string that uniquely identifies the campaign for an order. |  [optional] |
+|**cartId** | **String** | A cart id that the order was placed for. |  [optional] |
 |**landingSite** | **String** | The URL for the page where the buyer landed when entering the shop. |  [optional] |
 |**financialStatus** | **String** | The order status. Use this parameter to trigger [Order Notifications](https://mailchimp.com/developer/marketing/docs/e-commerce/#order-notifications). |  [optional] |
 |**fulfillmentStatus** | **String** | The fulfillment status for the order. Use this parameter to trigger [Order Notifications](https://mailchimp.com/developer/marketing/docs/e-commerce/#order-notifications). |  [optional] |

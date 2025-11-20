@@ -17,6 +17,7 @@ A list of a member's opens activity in a specific campaign.
 |**mergeFields** | **Map&lt;String, Object&gt;** | A dictionary of merge fields where the keys are the merge tags. See the [Merge Fields documentation](https://mailchimp.com/developer/marketing/docs/merge-fields/#structure) for more about the structure. |  [optional] |
 |**vip** | **Boolean** | [VIP status](https://mailchimp.com/help/designate-and-send-to-vip-contacts/) for subscriber. |  [optional] [readonly] |
 |**opensCount** | **Integer** | The total number of times the this campaign was opened by the list member. |  [optional] [readonly] |
+|**proxyExcludedOpensCount** | **Integer** | The total number of times the this campaign was opened by the list member excluding opens from email clients that use proxies . |  [optional] [readonly] |
 |**opens** | [**List&lt;MemberActivity1&gt;**](MemberActivity1.md) | An array of timestamps for each time a list member opened the campaign. If a list member opens an email multiple times, this will return a separate timestamp for each open event. |  [optional] |
 |**links** | [**List&lt;ResourceLink&gt;**](ResourceLink.md) | A list of link types and descriptions for the API schema documents. |  [optional] [readonly] |
 

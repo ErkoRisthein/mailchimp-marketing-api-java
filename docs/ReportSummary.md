@@ -9,8 +9,11 @@ High level reporting stats for an outreach.
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**opens** | **Integer** |  |  [optional] |
+|**proxyExcludedOpens** | **Integer** |  |  [optional] |
 |**uniqueOpens** | **Integer** |  |  [optional] |
+|**proxyExcludedUniqueOpens** | **Integer** |  |  [optional] |
 |**openRate** | **BigDecimal** |  |  [optional] |
+|**proxyExcludedOpenRate** | **BigDecimal** |  |  [optional] |
 |**clicks** | **Integer** |  |  [optional] |
 |**subscriberClicks** | **Integer** |  |  [optional] |
 |**clickRate** | **BigDecimal** |  |  [optional] |
