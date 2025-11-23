@@ -33,7 +33,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AbandonedBrowseAutomation.JSON_PROPERTY_STATUS
 })
 @JsonTypeName("Abandoned_Browse_Automation")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class AbandonedBrowseAutomation {
   public static final String JSON_PROPERTY_IS_SUPPORTED = "is_supported";
   @jakarta.annotation.Nullable
@@ -71,6 +71,9 @@ public class AbandonedBrowseAutomation {
 
     @JsonCreator
     public static StatusEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (StatusEnum b : StatusEnum.values()) {
         if (b.value.equals(value)) {
           return b;

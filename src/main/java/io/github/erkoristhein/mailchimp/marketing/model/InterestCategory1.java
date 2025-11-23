@@ -33,7 +33,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   InterestCategory1.JSON_PROPERTY_TYPE
 })
 @JsonTypeName("Interest_Category_1")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class InterestCategory1 {
   public static final String JSON_PROPERTY_TITLE = "title";
   @jakarta.annotation.Nonnull
@@ -73,6 +73,9 @@ public class InterestCategory1 {
 
     @JsonCreator
     public static TypeEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (TypeEnum b : TypeEnum.values()) {
         if (b.value.equals(value)) {
           return b;

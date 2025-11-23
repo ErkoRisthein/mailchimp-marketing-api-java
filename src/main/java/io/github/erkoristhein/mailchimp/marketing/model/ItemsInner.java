@@ -34,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ItemsInner.JSON_PROPERTY_DETAILS
 })
 @JsonTypeName("Items_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class ItemsInner {
   /**
    * The item type.
@@ -64,6 +64,9 @@ public class ItemsInner {
 
     @JsonCreator
     public static TypeEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (TypeEnum b : TypeEnum.values()) {
         if (b.value.equals(value)) {
           return b;

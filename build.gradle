@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'io.github.erkoristhein.mailchimp.marketing'
-version = '3.0.90-fix2'
+version = '3.0.90-fix3'
 
 buildscript {
     repositories {

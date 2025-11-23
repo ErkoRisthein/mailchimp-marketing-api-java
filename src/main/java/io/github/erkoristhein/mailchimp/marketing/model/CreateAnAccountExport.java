@@ -36,7 +36,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CreateAnAccountExport.JSON_PROPERTY_SINCE_TIMESTAMP
 })
 @JsonTypeName("Create_an_account_export")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class CreateAnAccountExport {
   /**
    * Gets or Sets includeStages
@@ -72,6 +72,9 @@ public class CreateAnAccountExport {
 
     @JsonCreator
     public static IncludeStagesEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (IncludeStagesEnum b : IncludeStagesEnum.values()) {
         if (b.value.equals(value)) {
           return b;

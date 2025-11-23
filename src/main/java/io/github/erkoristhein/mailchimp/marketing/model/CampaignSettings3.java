@@ -48,7 +48,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignSettings3.JSON_PROPERTY_TEMPLATE_ID
 })
 @JsonTypeName("Campaign_Settings_3")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class CampaignSettings3 {
   public static final String JSON_PROPERTY_SUBJECT_LINE = "subject_line";
   @jakarta.annotation.Nullable

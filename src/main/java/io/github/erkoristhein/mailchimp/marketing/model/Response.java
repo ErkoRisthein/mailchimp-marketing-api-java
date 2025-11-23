@@ -33,7 +33,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Response.JSON_PROPERTY_QUERY,
   Response.JSON_PROPERTY_ANSWER
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class Response {
   public static final String JSON_PROPERTY_QUESTION_ID = "question_id";
   @jakarta.annotation.Nullable
@@ -71,6 +71,9 @@ public class Response {
 
     @JsonCreator
     public static QuestionTypeEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (QuestionTypeEnum b : QuestionTypeEnum.values()) {
         if (b.value.equals(value)) {
           return b;

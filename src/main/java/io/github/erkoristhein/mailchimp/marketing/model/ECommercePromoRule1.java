@@ -42,7 +42,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ECommercePromoRule1.JSON_PROPERTY_UPDATED_AT_FOREIGN
 })
 @JsonTypeName("E_commerce_Promo_Rule_1")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class ECommercePromoRule1 {
   public static final String JSON_PROPERTY_ID = "id";
   @jakarta.annotation.Nonnull
@@ -94,6 +94,9 @@ public class ECommercePromoRule1 {
 
     @JsonCreator
     public static TypeEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (TypeEnum b : TypeEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -135,6 +138,9 @@ public class ECommercePromoRule1 {
 
     @JsonCreator
     public static TargetEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (TargetEnum b : TargetEnum.values()) {
         if (b.value.equals(value)) {
           return b;

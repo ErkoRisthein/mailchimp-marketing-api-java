@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   VisitsInner.JSON_PROPERTY_VAL
 })
 @JsonTypeName("Visits_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class VisitsInner {
   public static final String JSON_PROPERTY_DATE = "date";
   @jakarta.annotation.Nullable

@@ -34,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AutomationDelay1.JSON_PROPERTY_ACTION
 })
 @JsonTypeName("Automation_Delay_1")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class AutomationDelay1 {
   public static final String JSON_PROPERTY_AMOUNT = "amount";
   @jakarta.annotation.Nullable
@@ -70,6 +70,9 @@ public class AutomationDelay1 {
 
     @JsonCreator
     public static TypeEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (TypeEnum b : TypeEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -107,6 +110,9 @@ public class AutomationDelay1 {
 
     @JsonCreator
     public static DirectionEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (DirectionEnum b : DirectionEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -148,6 +154,9 @@ public class AutomationDelay1 {
 
     @JsonCreator
     public static ActionEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (ActionEnum b : ActionEnum.values()) {
         if (b.value.equals(value)) {
           return b;

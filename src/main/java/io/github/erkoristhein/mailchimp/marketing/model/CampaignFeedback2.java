@@ -46,7 +46,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignFeedback2.JSON_PROPERTY_LINKS
 })
 @JsonTypeName("Campaign_Feedback_2")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class CampaignFeedback2 {
   public static final String JSON_PROPERTY_FEEDBACK_ID = "feedback_id";
   @jakarta.annotation.Nullable
@@ -114,6 +114,9 @@ public class CampaignFeedback2 {
 
     @JsonCreator
     public static SourceEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (SourceEnum b : SourceEnum.values()) {
         if (b.value.equals(value)) {
           return b;

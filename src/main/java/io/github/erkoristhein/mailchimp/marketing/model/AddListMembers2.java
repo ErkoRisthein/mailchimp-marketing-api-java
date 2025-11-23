@@ -52,7 +52,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AddListMembers2.JSON_PROPERTY_TIMESTAMP_OPT
 })
 @JsonTypeName("Add_List_Members_2")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class AddListMembers2 {
   public static final String JSON_PROPERTY_EMAIL_ADDRESS = "email_address";
   @jakarta.annotation.Nonnull
@@ -90,6 +90,9 @@ public class AddListMembers2 {
 
     @JsonCreator
     public static StatusIfNewEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (StatusIfNewEnum b : StatusIfNewEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -139,6 +142,9 @@ public class AddListMembers2 {
 
     @JsonCreator
     public static StatusEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (StatusEnum b : StatusEnum.values()) {
         if (b.value.equals(value)) {
           return b;

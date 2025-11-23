@@ -50,7 +50,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SentTo1.JSON_PROPERTY_LINKS
 })
 @JsonTypeName("Sent_To_1")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class SentTo1 {
   public static final String JSON_PROPERTY_EMAIL_ID = "email_id";
   @jakarta.annotation.Nullable
@@ -96,6 +96,9 @@ public class SentTo1 {
 
     @JsonCreator
     public static StatusEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (StatusEnum b : StatusEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -145,6 +148,9 @@ public class SentTo1 {
 
     @JsonCreator
     public static AbsplitGroupEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (AbsplitGroupEnum b : AbsplitGroupEnum.values()) {
         if (b.value.equals(value)) {
           return b;

@@ -36,7 +36,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SegmentOptions.JSON_PROPERTY_CONDITIONS
 })
 @JsonTypeName("Segment_Options")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class SegmentOptions {
   public static final String JSON_PROPERTY_SAVED_SEGMENT_ID = "saved_segment_id";
   @jakarta.annotation.Nullable
@@ -68,6 +68,9 @@ public class SegmentOptions {
 
     @JsonCreator
     public static MatchEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (MatchEnum b : MatchEnum.values()) {
         if (b.value.equals(value)) {
           return b;

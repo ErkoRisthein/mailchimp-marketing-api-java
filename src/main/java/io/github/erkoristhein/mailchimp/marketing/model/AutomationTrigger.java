@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AutomationTrigger.JSON_PROPERTY_WORKFLOW_EMAILS_COUNT
 })
 @JsonTypeName("Automation_Trigger")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class AutomationTrigger {
   /**
    * The type of Automation workflow.
@@ -93,6 +93,9 @@ public class AutomationTrigger {
 
     @JsonCreator
     public static WorkflowTypeEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (WorkflowTypeEnum b : WorkflowTypeEnum.values()) {
         if (b.value.equals(value)) {
           return b;

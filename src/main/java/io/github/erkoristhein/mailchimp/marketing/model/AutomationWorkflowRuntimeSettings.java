@@ -36,7 +36,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AutomationWorkflowRuntimeSettings.JSON_PROPERTY_HOURS
 })
 @JsonTypeName("Automation_Workflow_Runtime_Settings")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class AutomationWorkflowRuntimeSettings {
   /**
    * Gets or Sets days
@@ -74,6 +74,9 @@ public class AutomationWorkflowRuntimeSettings {
 
     @JsonCreator
     public static DaysEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (DaysEnum b : DaysEnum.values()) {
         if (b.value.equals(value)) {
           return b;

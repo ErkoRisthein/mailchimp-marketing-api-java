@@ -36,7 +36,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CollectionOfElementStyleForListSignupForms.JSON_PROPERTY_OPTIONS
 })
 @JsonTypeName("Collection_of_Element_style_for_List_Signup_Forms")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class CollectionOfElementStyleForListSignupForms {
   /**
    * A string that identifies the element selector.
@@ -88,6 +88,9 @@ public class CollectionOfElementStyleForListSignupForms {
 
     @JsonCreator
     public static SelectorEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (SelectorEnum b : SelectorEnum.values()) {
         if (b.value.equals(value)) {
           return b;

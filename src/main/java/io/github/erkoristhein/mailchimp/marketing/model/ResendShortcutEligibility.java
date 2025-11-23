@@ -38,7 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ResendShortcutEligibility.JSON_PROPERTY_TO_NON_PURCHASERS
 })
 @JsonTypeName("Resend_Shortcut_Eligibility")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class ResendShortcutEligibility {
   public static final String JSON_PROPERTY_TO_NON_OPENERS = "to_non_openers";
   @jakarta.annotation.Nullable

@@ -41,7 +41,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SignupFormHeaderOptions.JSON_PROPERTY_IMAGE_TARGET
 })
 @JsonTypeName("Signup_form_header_options")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class SignupFormHeaderOptions {
   public static final String JSON_PROPERTY_IMAGE_URL = "image_url";
   @jakarta.annotation.Nullable
@@ -97,6 +97,9 @@ public class SignupFormHeaderOptions {
 
     @JsonCreator
     public static ImageAlignEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (ImageAlignEnum b : ImageAlignEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -154,6 +157,9 @@ public class SignupFormHeaderOptions {
 
     @JsonCreator
     public static ImageBorderStyleEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (ImageBorderStyleEnum b : ImageBorderStyleEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -197,6 +203,9 @@ public class SignupFormHeaderOptions {
 
     @JsonCreator
     public static ImageTargetEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (ImageTargetEnum b : ImageTargetEnum.values()) {
         if (b.value.equals(value)) {
           return b;

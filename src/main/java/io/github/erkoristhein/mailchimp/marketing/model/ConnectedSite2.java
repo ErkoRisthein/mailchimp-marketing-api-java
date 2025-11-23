@@ -33,7 +33,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConnectedSite2.JSON_PROPERTY_SITE_SCRIPT
 })
 @JsonTypeName("Connected_Site_2")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class ConnectedSite2 {
   public static final String JSON_PROPERTY_SITE_FOREIGN_ID = "site_foreign_id";
   @jakarta.annotation.Nullable

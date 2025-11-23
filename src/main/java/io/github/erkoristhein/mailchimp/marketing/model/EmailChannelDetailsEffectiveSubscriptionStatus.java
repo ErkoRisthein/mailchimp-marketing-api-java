@@ -31,7 +31,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   EmailChannelDetailsEffectiveSubscriptionStatus.JSON_PROPERTY_VALUE
 })
 @JsonTypeName("Email_Channel_Details_effective_subscription_status")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class EmailChannelDetailsEffectiveSubscriptionStatus {
   /**
    * Gets or Sets value
@@ -63,6 +63,9 @@ public class EmailChannelDetailsEffectiveSubscriptionStatus {
 
     @JsonCreator
     public static ValueEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (ValueEnum b : ValueEnum.values()) {
         if (b.value.equals(value)) {
           return b;

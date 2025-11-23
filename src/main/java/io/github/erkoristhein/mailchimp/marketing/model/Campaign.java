@@ -70,7 +70,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Campaign.JSON_PROPERTY_RESEND_SHORTCUT_USAGE,
   Campaign.JSON_PROPERTY_LINKS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class Campaign {
   public static final String JSON_PROPERTY_ID = "id";
   @jakarta.annotation.Nullable
@@ -116,6 +116,9 @@ public class Campaign {
 
     @JsonCreator
     public static TypeEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (TypeEnum b : TypeEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -179,6 +182,9 @@ public class Campaign {
 
     @JsonCreator
     public static StatusEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (StatusEnum b : StatusEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -230,6 +236,9 @@ public class Campaign {
 
     @JsonCreator
     public static ContentTypeEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (ContentTypeEnum b : ContentTypeEnum.values()) {
         if (b.value.equals(value)) {
           return b;

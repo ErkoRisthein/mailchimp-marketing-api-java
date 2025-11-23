@@ -45,7 +45,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ABTestingOptions.JSON_PROPERTY_SEND_TIME_WINNER
 })
 @JsonTypeName("A_B_Testing_Options")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class ABTestingOptions {
   /**
    * The type of AB split to run.
@@ -75,6 +75,9 @@ public class ABTestingOptions {
 
     @JsonCreator
     public static SplitTestEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (SplitTestEnum b : SplitTestEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -116,6 +119,9 @@ public class ABTestingOptions {
 
     @JsonCreator
     public static PickWinnerEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (PickWinnerEnum b : PickWinnerEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -155,6 +161,9 @@ public class ABTestingOptions {
 
     @JsonCreator
     public static WaitUnitsEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (WaitUnitsEnum b : WaitUnitsEnum.values()) {
         if (b.value.equals(value)) {
           return b;

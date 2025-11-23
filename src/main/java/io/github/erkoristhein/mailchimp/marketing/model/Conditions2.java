@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Conditions2.JSON_PROPERTY_CONDITIONS
 })
 @JsonTypeName("Conditions_2")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T16:28:01.262813+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class Conditions2 {
   /**
    * Match type.
@@ -63,6 +63,9 @@ public class Conditions2 {
 
     @JsonCreator
     public static MatchEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (MatchEnum b : MatchEnum.values()) {
         if (b.value.equals(value)) {
           return b;
