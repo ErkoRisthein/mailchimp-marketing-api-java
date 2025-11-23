@@ -45,7 +45,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DailyListActivity.JSON_PROPERTY_LINKS
 })
 @JsonTypeName("Daily_List_Activity")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T13:33:02.593663+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class DailyListActivity {
   public static final String JSON_PROPERTY_DAY = "day";
   @jakarta.annotation.Nullable

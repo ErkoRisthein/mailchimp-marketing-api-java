@@ -37,7 +37,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   List8.JSON_PROPERTY_OPTIONS
 })
 @JsonTypeName("List_8")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-20T13:33:02.593663+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]", comments = "Generator version: 7.17.0")
 public class List8 {
   public static final String JSON_PROPERTY_NAME = "name";
   @jakarta.annotation.Nonnull

@@ -4,7 +4,7 @@ Mailchimp Marketing API
 
 - API version: 3.0.90
 
-- Build date: 2025-11-20T13:33:02.593663+02:00[Europe/Tallinn]
+- Build date: 2025-11-23T15:30:38.569460+02:00[Europe/Tallinn]
 
 - Generator version: 7.17.0
 
@@ -67,7 +67,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>io.github.erkoristhein.mailchimp.marketing</groupId>
   <artifactId>mailchimp-marketing-api-java</artifactId>
-  <version>3.0.90-fix</version>
+  <version>3.0.90-fix2</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -83,7 +83,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "io.github.erkoristhein.mailchimp.marketing:mailchimp-marketing-api-java:3.0.90-fix"
+     implementation "io.github.erkoristhein.mailchimp.marketing:mailchimp-marketing-api-java:3.0.90-fix2"
   }
 ```
 
@@ -97,7 +97,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/mailchimp-marketing-api-java-3.0.90-fix.jar`
+- `target/mailchimp-marketing-api-java-3.0.90-fix2.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
